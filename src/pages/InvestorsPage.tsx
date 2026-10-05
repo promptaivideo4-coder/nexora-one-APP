@@ -42,6 +42,7 @@ import {
   AlertTriangle,
   UserMinus,
   Zap,
+  Home,
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
 
@@ -2156,7 +2157,19 @@ export const InvestorsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* 2. Transformation Flow 6-Stage Roadmap */}
+        {/* 2. EXACT CINEMATIC TRANSFORMATION IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/digital-transformation-cinematic.webp"
+            alt="Before Nexora vs With Nexora - Digital Transformation Infographic"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Transformation Flow 6-Stage Roadmap */}
         <div className="mb-14 sm:mb-16">
           <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)]">
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
@@ -2280,7 +2293,1712 @@ export const InvestorsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 7 — MARKET OPPORTUNITY */}
+      {/* SECTION 7 — NEXORA JOBS */}
+      <section
+        id="nexora-jobs"
+        aria-label="Nexora Jobs Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Briefcase className="w-3.5 h-3.5 text-[#F4D03F]" />
+            7. NEXORA JOBS
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-4 text-balance">
+            Work. Hire.{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Build Your Career.
+            </span>
+          </h2>
+
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-heading font-medium text-white/70 mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+            Independent Ecosystem Layer
+          </div>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed">
+            A dedicated career and hiring infrastructure connecting verified beauty businesses with skilled industry professionals, creative artists, and licensed specialists.
+          </p>
+        </div>
+
+        {/* 2. EXACT CINEMATIC JOBS INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/nexora-jobs-cinematic.webp"
+            alt="Work. Hire. Build Your Career. - Nexora Jobs Connected Talent and Hiring Infographic"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Nexora Jobs Solution — Dual Pillars (Salons & Professionals) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14 sm:mb-16">
+          {/* For Salons / Employers */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-widest block">
+                    For Beauty Businesses
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                    Salons Can Post Jobs
+                  </h3>
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
+                Broadcast hiring requirements across the Nexora network to reach pre-screened stylists, technicians, and managers with verified portfolios and verified skill badges.
+              </p>
+
+              {/* Salon hiring flow: Vacancy → Candidate → Interview → Hire */}
+              <div className="mb-6">
+                <span className="text-xs font-heading font-bold uppercase tracking-wider text-white/50 block mb-3">
+                  Salon Hiring Flow:
+                </span>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                  {[
+                    { step: '01', title: 'Vacancy', desc: 'Post role & terms' },
+                    { step: '02', title: 'Candidate', desc: 'Review talent pool' },
+                    { step: '03', title: 'Interview', desc: 'Assess skills live' },
+                    { step: '04', title: 'Hire', desc: 'Onboard to team' },
+                  ].map((flow, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] relative group"
+                    >
+                      <span className="text-[9px] font-heading font-bold text-[#DAAF37]/60 block mb-0.5">
+                        Step {flow.step}
+                      </span>
+                      <div className="text-xs font-heading font-bold text-white">
+                        {flow.title}
+                      </div>
+                      <div className="text-[10px] text-white/45 font-sans mt-0.5">
+                        {flow.desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="p-3 rounded-xl bg-black/60 border border-[#DAAF37]/20 text-center">
+              <span className="text-xs font-heading font-semibold text-[#F4D03F]">
+                Vacancy → Candidate → Interview → Hire
+              </span>
+            </div>
+          </div>
+
+          {/* For Professionals / Job Seekers */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Users className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-widest block">
+                    For Beauty Specialists
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                    Professionals Can Search & Apply
+                  </h3>
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm text-white/70 font-sans leading-relaxed mb-6">
+                Create a portable digital portfolio of client transformations, verified credentials, and client feedback to apply directly to top-tier salons, spas, and boutique studios.
+              </p>
+
+              {/* Job seeker flow: Profile → Search → Apply → Opportunity */}
+              <div className="mb-6">
+                <span className="text-xs font-heading font-bold uppercase tracking-wider text-white/50 block mb-3">
+                  Job Seeker Flow:
+                </span>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                  {[
+                    { step: '01', title: 'Profile', desc: 'Build visual portfolio' },
+                    { step: '02', title: 'Search', desc: 'Browse verified salons' },
+                    { step: '03', title: 'Apply', desc: '1-click submission' },
+                    { step: '04', title: 'Opportunity', desc: 'Grow your career' },
+                  ].map((flow, idx) => (
+                    <div
+                      key={idx}
+                      className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] relative group"
+                    >
+                      <span className="text-[9px] font-heading font-bold text-[#DAAF37]/60 block mb-0.5">
+                        Step {flow.step}
+                      </span>
+                      <div className="text-xs font-heading font-bold text-white">
+                        {flow.title}
+                      </div>
+                      <div className="text-[10px] text-white/45 font-sans mt-0.5">
+                        {flow.desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="p-3 rounded-xl bg-black/60 border border-[#DAAF37]/20 text-center">
+              <span className="text-xs font-heading font-semibold text-[#F4D03F]">
+                Profile → Search → Apply → Opportunity
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Salon / Business Need (12 Talent Roles) */}
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Specialized Beauty Talent
+              </span>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                Salon / Business Need
+              </h3>
+            </div>
+            <span className="text-xs font-sans text-white/50">
+              Businesses Can Need Talent Such As:
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              'Barber',
+              'Hair Stylist',
+              'Beautician',
+              'Beauty Therapist',
+              'Makeup Artist',
+              'Nail Technician',
+              'Spa Therapist',
+              'Tattoo Artist',
+              'Salon Manager',
+              'Front Desk',
+              'Trainer',
+              'Sales / Beauty Consultant',
+            ].map((role, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#DAAF37]/40 transition-colors group"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] text-xs font-heading font-bold flex-shrink-0 group-hover:bg-[#DAAF37]/20">
+                  {idx + 1}
+                </div>
+                <span className="text-xs sm:text-sm font-heading font-medium text-white/90 group-hover:text-white truncate">
+                  {role}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 5. Core Message Banner */}
+        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#DAAF37]/[0.15] via-black to-[#DAAF37]/[0.1] border border-[#DAAF37]/40 text-center shadow-[0_8px_32px_rgba(0,0,0,0.6),0_0_24px_rgba(218,175,55,0.15)] relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#F4D03F] to-transparent" />
+          <span className="text-xs font-heading font-bold uppercase tracking-[0.25em] text-[#DAAF37] block mb-2">
+            Core Ecosystem Principle
+          </span>
+          <h4 className="text-lg sm:text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FFF2B2] to-[#DAAF37] max-w-3xl mx-auto leading-snug">
+            &ldquo;A connected beauty ecosystem needs both customers and talent.&rdquo;
+          </h4>
+          <p className="text-xs sm:text-sm text-white/60 font-sans mt-3 max-w-2xl mx-auto leading-relaxed">
+            By unifying client demand and skilled workforce supply within one platform, Nexora solves operational shortages while creating upward career mobility.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 8 — NEXORA MARKET / B2B */}
+      <section
+        id="nexora-market"
+        aria-label="Nexora Market / B2B Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <ShoppingBag className="w-3.5 h-3.5 text-[#F4D03F]" />
+            8. NEXORA MARKET / B2B
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-4 text-balance">
+            Beauty-Focused B2B Discovery &{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Wholesale Network
+            </span>
+          </h2>
+
+          {/* Supply Flow Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 text-xs font-heading font-semibold text-[#F4D03F] mb-5">
+            <span>Brand</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Supplier / Distributor</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Beauty Business</span>
+          </div>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Connecting beauty manufacturers, authorized suppliers, and salon businesses in a direct B2B marketplace discovery network.
+          </p>
+
+          {/* B2B Connection Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>BUSINESS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>DISCOVER SUPPLIER</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>EXPLORE PRODUCTS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>CONNECT</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC B2B INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/nexora-market-b2b-cinematic.webp"
+            alt="Nexora Market B2B Network - Brand to Supplier to Beauty Business Discovery Infographic"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. The 12 Marketplace Categories Grid */}
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Connected B2B Supply Network
+              </span>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                12 Marketplace Categories
+              </h3>
+            </div>
+            <span className="text-xs font-sans text-white/50">
+              Wholesale & Direct Supplier Discovery
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              '1. Hair & Styling',
+              '2. Skin & Cosmetics',
+              '3. Salon Furniture',
+              '4. Spa Equipment',
+              '5. Tattoo Supplies',
+              '6. Nail Products',
+              '7. Professional Tools',
+              '8. Disposable Supplies',
+              '9. Beauty Technology',
+              '10. Academy & Training',
+              '11. Wholesale Products',
+              '12. Brand Partnerships',
+            ].map((cat, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#DAAF37]/40 transition-colors group"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#DAAF37] flex-shrink-0 group-hover:scale-125 transition-transform" />
+                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90 group-hover:text-white truncate">
+                  {cat}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/products#b2b"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore B2B Network Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 9 — NO BROKER REAL ESTATE */}
+      <section
+        id="no-broker-real-estate"
+        aria-label="No Broker Real Estate Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Home className="w-3.5 h-3.5 text-[#F4D03F]" />
+            9. NO BROKER REAL ESTATE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            The Architecture Can Extend{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Beyond Beauty.
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Demonstrating platform architecture versatility through direct owner-to-buyer property discovery without broker dependency.
+          </p>
+
+          {/* Traditional Flow vs No Broker Approach Comparison Ribbons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-2">
+            <div className="px-4 py-2 rounded-xl bg-red-950/30 border border-red-500/20 text-xs font-heading font-medium text-red-300">
+              <span className="font-bold text-red-400 mr-1.5">Traditional:</span>
+              Owner → Broker → Buyer/Tenant
+            </div>
+
+            <div className="text-[#DAAF37] font-bold hidden sm:block">vs</div>
+
+            <div className="px-4 py-2 rounded-xl bg-[#DAAF37]/15 border border-[#DAAF37]/35 text-xs sm:text-sm font-heading font-semibold text-[#FFF2B2] shadow-[0_0_20px_rgba(218,175,55,0.12)]">
+              <span className="font-bold text-[#F4D03F] mr-1.5">No Broker Approach:</span>
+              Owner → Property Listing → Direct Enquiry → Buyer/Tenant
+            </div>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC REAL ESTATE INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/no-broker-real-estate-cinematic.webp"
+            alt="The Architecture Can Extend Beyond Beauty - Traditional vs No Broker Real Estate Direct Discovery Model"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Core Proposition Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 sm:mb-12">
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-4">
+                <Search className="w-4 h-4" />
+              </div>
+              <h3 className="text-base sm:text-lg font-heading font-bold text-white mb-2">
+                Direct Property Discovery
+              </h3>
+              <p className="text-xs sm:text-sm text-white/65 font-sans leading-relaxed">
+                Seamless digital showcase for commercial shops, modern apartments, and independent properties with high-resolution visual tours and location maps.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-[#DAAF37] font-heading font-semibold">
+              Frictionless Search
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-4">
+                <Users className="w-4 h-4" />
+              </div>
+              <h3 className="text-base sm:text-lg font-heading font-bold text-white mb-2">
+                Direct Owner Connection
+              </h3>
+              <p className="text-xs sm:text-sm text-white/65 font-sans leading-relaxed">
+                Connect buyers and tenants directly with property owners via instant inquiry channels without middleman phone tag or hidden markups.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-[#DAAF37] font-heading font-semibold">
+              Zero Intermediary
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+            <div>
+              <div className="w-9 h-9 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-4">
+                <ShieldCheck className="w-4 h-4" />
+              </div>
+              <h3 className="text-base sm:text-lg font-heading font-bold text-white mb-2">
+                No Broker Positioning
+              </h3>
+              <p className="text-xs sm:text-sm text-white/65 font-sans leading-relaxed">
+                Eliminating broker dependencies and unnecessary commission layers through a verified direct listing network infrastructure.
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-white/[0.06] text-[11px] text-[#DAAF37] font-heading font-semibold">
+              Transparent Network
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Strategic Vertical Positioning Banner */}
+        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#DAAF37]/[0.12] via-black to-[#DAAF37]/[0.05] border border-[#DAAF37]/35 text-center shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
+          <span className="text-xs font-heading font-bold uppercase tracking-[0.2em] text-[#DAAF37] block mb-2">
+            Strategic Platform Architecture
+          </span>
+          <p className="text-sm sm:text-base font-serif italic text-white/90 max-w-3xl mx-auto leading-relaxed">
+            &ldquo;Beauty remains the core ecosystem. Real Estate is an expansion vertical demonstrating platform architecture versatility.&rdquo;
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 10 — NEXORA GROWTH PARTNER */}
+      <section
+        id="nexora-growth-partner"
+        aria-label="Nexora Growth Partner Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <TrendingUp className="w-3.5 h-3.5 text-[#F4D03F]" />
+            10. NEXORA GROWTH PARTNER
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            A Human Growth Network Behind{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Digital Adoption
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            The field-level human support layer bridging the gap for local beauty businesses transitioning from offline operations into the connected digital economy.
+          </p>
+
+          {/* Growth Partner Flow Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>IDENTIFY</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>EXPLAIN</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>ONBOARD</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>SETUP</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>ACTIVATE</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>SUPPORT</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC GROWTH PARTNER INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/growth-partner-cinematic.webp"
+            alt="A Human Growth Network Behind Digital Adoption: Identify, Explain, Onboard, Setup, Activate, Support - Nexora Growth Partner Visual"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            href="https://fanal-templetes-app.vercel.app/partner/dashboard"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Growth Partner Dashboard
+          </Button>
+          <Button
+            to="/products#growth-partner"
+            variant="secondary"
+            size="md"
+          >
+            View Growth Partner Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 11 — GROWTH PARTNER COMMISSION */}
+      <section
+        id="growth-partner-commission"
+        aria-label="Growth Partner Commission Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Zap className="w-3.5 h-3.5 text-[#F4D03F]" />
+            11. GROWTH PARTNER COMMISSION
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            Performance-Linked{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Growth Share Model
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Earnings directly connected to verified company collections through a clear, transparent performance-linked partner growth share architecture.
+          </p>
+
+          {/* Key Principle Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>NO COLLECTION = NO COMMISSION</span>
+            <span className="text-[#DAAF37]/60">•</span>
+            <span>ACTUAL VERIFIED COLLECTION = APPLICABLE PARTNER SHARE</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC COMMISSION INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/growth-partner-commission-cinematic.webp"
+            alt="Growth Partner Commission Framework - Performance Linked Growth Share, One Time Activation, Recurring Share 10% to 5% to 2% Lifetime - Nexora Financial Model"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            href="https://fanal-templetes-app.vercel.app/partner/dashboard"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Growth Partner Dashboard
+          </Button>
+          <Button
+            to="/products#growth-partner"
+            variant="secondary"
+            size="md"
+          >
+            View Growth Partner Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 12 — GROWTH PARTNER REWARD SYSTEM */}
+      <section
+        id="growth-partner-reward-system"
+        aria-label="Growth Partner Reward System Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Gift className="w-3.5 h-3.5 text-[#F4D03F]" />
+            12. GROWTH PARTNER REWARD SYSTEM
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            From Business Onboarding to{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Achievement Milestones
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Recognizing partner growth and scale through 7 verified achievement milestones — from entry recognition to district partner leadership.
+          </p>
+
+          {/* Milestone Flow Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>25 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>50 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>100 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>250 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>500 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>750 SHOPS</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>1000+ SHOPS</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC REWARD SYSTEM INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/growth-partner-reward-system-cinematic.webp"
+            alt="Growth Partner Reward Journey - 7 Verified Milestones: T-Shirt, Samsung Tablet, HP Laptop, Electric Scooter, iPhone, Royal Enfield, SUV Car - Nexora Achievement Model"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            href="https://fanal-templetes-app.vercel.app/partner/dashboard"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Growth Partner Portal
+          </Button>
+          <Button
+            to="/products#growth-partner"
+            variant="secondary"
+            size="md"
+          >
+            View Reward Terms
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 13 — MAIN WEBSITE DIRECT INCOME */}
+      <section
+        id="main-website-direct-income"
+        aria-label="Main Website Direct Income Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Globe className="w-3.5 h-3.5 text-[#F4D03F]" />
+            13. MAIN WEBSITE DIRECT INCOME
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            A Separate Direct{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Revenue Layer
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Direct online organic transactions through the main website platform flow entirely into Nexora company revenue without partner commission deduction.
+          </p>
+
+          {/* Core Principle Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Direct → Nexora</span>
+            <span className="text-[#DAAF37]/60">•</span>
+            <span>Separate from Growth Partner Commission Pool</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC DIRECT INCOME INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/main-website-direct-income-cinematic.webp"
+            alt="Main Website Direct Income - A Separate Direct Revenue Layer: ₹1,00,000/Month, Growth Partner Commission ₹0, Annual ₹12,00,000 Direct to Nexora"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Financial Metrics Summary Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-white/50 block mb-1">
+              Monthly Assumption
+            </span>
+            <div className="text-2xl font-heading font-bold text-white mb-1">
+              ₹1,00,000
+            </div>
+            <p className="text-xs text-white/60 font-sans">
+              Main Website Direct Income
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-emerald-400 block mb-1">
+              Partner Commission
+            </span>
+            <div className="text-2xl font-heading font-bold text-emerald-300 mb-1">
+              ₹0
+            </div>
+            <p className="text-xs text-white/60 font-sans">
+              0% Partner Payout Deduction
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Direct Nexora Income
+            </span>
+            <div className="text-2xl font-heading font-bold text-[#F4D03F] mb-1">
+              ₹1,00,000 / mo
+            </div>
+            <p className="text-xs text-white/60 font-sans">
+              100% Company Retained Revenue
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Annualized Run-Rate
+            </span>
+            <div className="text-2xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FFF2B2] to-[#DAAF37] mb-1">
+              ₹12,00,000 / yr
+            </div>
+            <p className="text-xs text-white/60 font-sans">
+              Annual Direct Organic Revenue
+            </p>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/products#white-label"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Main Platform Website Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 14 — NEXORA BUSINESS MODEL */}
+      <section
+        id="nexora-business-model"
+        aria-label="Nexora Business Model Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Boxes className="w-3.5 h-3.5 text-[#F4D03F]" />
+            14. NEXORA BUSINESS MODEL
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            Complete Money & Value{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Architecture
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Showing the complete money and value architecture across all ecosystem layers without inventing unapproved monetization.
+          </p>
+
+          {/* Salon/Shop Layer Flow Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Salon / Shop Platform Revenue</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Nexora Eligible Company Share</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Growth Partner Share</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Milestone Rewards</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>Company Contribution</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC BUSINESS MODEL INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/nexora-business-model-cinematic.webp"
+            alt="Nexora Business Model - Complete Money and Value Architecture across Salon/Shop Layer, Main Website, Nexora Market, Nexora Jobs, Real Estate, Enterprise"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Separate Ecosystem Layers Grid */}
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-white/10 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Value Architecture
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white">
+                Separate Ecosystem Layers
+              </h3>
+            </div>
+            <span className="text-xs font-sans text-white/50">
+              Only Approved Monetization Included
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {/* Main Website */}
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-3">
+                  <Globe className="w-4 h-4" />
+                </div>
+                <h4 className="text-base font-heading font-bold text-white mb-1">
+                  Main Website
+                </h4>
+                <p className="text-xs font-heading font-semibold text-[#F4D03F] mb-2">
+                  Direct Income
+                </p>
+                <p className="text-xs text-white/60 font-sans leading-relaxed">
+                  Organic platform revenues flowing 100% directly to Nexora without partner commission splits.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-[#DAAF37] font-heading font-semibold">
+                Direct Revenue Layer
+              </div>
+            </div>
+
+            {/* Nexora Market */}
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-3">
+                  <ShoppingBag className="w-4 h-4" />
+                </div>
+                <h4 className="text-base font-heading font-bold text-white mb-1">
+                  Nexora Market
+                </h4>
+                <p className="text-xs font-heading font-semibold text-[#F4D03F] mb-2">
+                  B2B Network
+                </p>
+                <p className="text-xs text-white/60 font-sans leading-relaxed">
+                  Direct brand-to-business discovery positioned with zero commission middleman barriers.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-[#DAAF37] font-heading font-semibold">
+                No Commission Positioning
+              </div>
+            </div>
+
+            {/* Nexora Jobs */}
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-3">
+                  <Briefcase className="w-4 h-4" />
+                </div>
+                <h4 className="text-base font-heading font-bold text-white mb-1">
+                  Nexora Jobs
+                </h4>
+                <p className="text-xs font-heading font-semibold text-[#F4D03F] mb-2">
+                  Talent Ecosystem
+                </p>
+                <p className="text-xs text-white/60 font-sans leading-relaxed">
+                  Independent recruitment layer connecting verified salons with skilled beauty specialists.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-[#DAAF37] font-heading font-semibold">
+                Employment Network
+              </div>
+            </div>
+
+            {/* Real Estate */}
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-3">
+                  <Home className="w-4 h-4" />
+                </div>
+                <h4 className="text-base font-heading font-bold text-white mb-1">
+                  Real Estate
+                </h4>
+                <p className="text-xs font-heading font-semibold text-[#F4D03F] mb-2">
+                  Expansion Vertical
+                </p>
+                <p className="text-xs text-white/60 font-sans leading-relaxed">
+                  Demonstrating platform versatility through direct owner-to-tenant property listings.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-[#DAAF37] font-heading font-semibold">
+                No Broker Expansion
+              </div>
+            </div>
+
+            {/* Enterprise */}
+            <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/25 flex items-center justify-center text-[#F4D03F] mb-3">
+                  <Building2 className="w-4 h-4" />
+                </div>
+                <h4 className="text-base font-heading font-bold text-white mb-1">
+                  Enterprise
+                </h4>
+                <p className="text-xs font-heading font-semibold text-[#F4D03F] mb-2">
+                  Multi-Unit Networks
+                </p>
+                <p className="text-xs text-white/60 font-sans leading-relaxed">
+                  Scalable management for salon chains, franchise networks, and international beauty brands.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-[#DAAF37] font-heading font-semibold">
+                Chains & Franchises
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/ecosystem"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Complete Ecosystem
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 15 — WHY NEXORA CAN SCALE */}
+      <section
+        id="why-nexora-can-scale"
+        aria-label="Why Nexora Can Scale Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <TrendingUp className="w-3.5 h-3.5 text-[#F4D03F]" />
+            15. WHY NEXORA CAN SCALE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            The Growth Engine Is{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              The Network
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Positioning Nexora as a compounding multi-stakeholder ecosystem network — driven by self-reinforcing viral adoption flywheels far beyond a simple booking platform.
+          </p>
+
+          {/* Cross-Ecosystem Effect Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Business</span>
+            <span className="text-[#DAAF37]/60">↔</span>
+            <span>Professional</span>
+            <span className="text-[#DAAF37]/60">↔</span>
+            <span>Customer</span>
+            <span className="text-[#DAAF37]/60">↔</span>
+            <span>Supplier / Brand</span>
+            <span className="text-[#DAAF37]/60">↔</span>
+            <span>Growth Partner</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC SCALING INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/why-nexora-can-scale-cinematic.webp"
+            alt="Why Nexora Can Scale - Dual Compounding Flywheels: Core Network Flywheel & Digital Transformation Flywheel with Cross-Ecosystem Network Effect"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Dual Compounding Flywheels Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 sm:mb-12">
+          {/* Core Flywheel */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] flex-shrink-0">
+                  <RefreshCw className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-widest block">
+                    Network Accelerator
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                    Core Flywheel
+                  </h3>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {[
+                  { step: 'Growth Partners', desc: 'Field-level human onboarding & merchant acquisition' },
+                  { step: 'More Businesses', desc: 'Expanding local merchant density & service directory' },
+                  { step: 'More Active Businesses', desc: 'Active online schedules, websites & client CRM' },
+                  { step: 'More Customers', desc: 'Higher organic discovery & seamless booking' },
+                  { step: 'More Usage', desc: 'Frequent appointments, WhatsApp notifications & reviews' },
+                  { step: 'More Business Relationships', desc: 'Stronger repeat client retention & loyalty' },
+                  { step: 'More Ecosystem Activity', desc: 'Wholesale B2B orders & professional job hiring' },
+                  { step: 'More Growth Opportunities', desc: 'High partner rewards & compounding network value' },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+                    <span className="w-5 h-5 rounded-full bg-[#DAAF37]/15 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] text-[10px] font-bold flex-shrink-0">
+                      {idx + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-xs font-heading font-bold text-white block truncate">{item.step}</span>
+                      <span className="text-[10px] text-white/50 font-sans truncate block">{item.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Digital Transformation Flywheel */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] flex-shrink-0">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-widest block">
+                    Product Adoption
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                    Digital Transformation Flywheel
+                  </h3>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {[
+                  { step: 'Free Website', desc: 'Zero cost barrier with 30+ beauty templates' },
+                  { step: 'Business Onboarding', desc: '30-minute partner-guided setup & profile creation' },
+                  { step: 'Digital Presence', desc: 'Branded digital storefront & online availability' },
+                  { step: 'Customer Discovery', desc: 'Local search visibility & direct client booking' },
+                  { step: 'Booking / Engagement', desc: 'Automated WhatsApp reminders & calendar sync' },
+                  { step: 'Retention', desc: 'Automated customer recall & loyalty points' },
+                  { step: 'Business Growth', desc: 'Predictable repeat bookings & off-peak load filling' },
+                  { step: 'Stronger Network', desc: 'Compounding network effects for the entire ecosystem' },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06]">
+                    <span className="w-5 h-5 rounded-full bg-[#DAAF37]/15 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] text-[10px] font-bold flex-shrink-0">
+                      {idx + 1}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-xs font-heading font-bold text-white block truncate">{item.step}</span>
+                      <span className="text-[10px] text-white/50 font-sans truncate block">{item.desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/ecosystem"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Network Architecture
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 16 — WHY NEXORA IS DIFFERENT */}
+      <section
+        id="why-nexora-is-different"
+        aria-label="Why Nexora Is Different Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
+            16. WHY NEXORA IS DIFFERENT
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            From Fragmented To{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Connected Ecosystem
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Where traditional beauty businesses struggle across multiple disconnected software tools, Nexora unifies all core operations into one connected digital network layer.
+          </p>
+
+          {/* Differentiator Pillars Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Free Beauty Website</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>30+ Templates</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>Growth Partner Onboarding</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>Connected Ecosystem</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC DIFFERENTIATION INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/why-nexora-is-different-cinematic.webp"
+            alt="Why Nexora Is Different - Traditional Fragmented Beauty Model vs Nexora Connected Ecosystem Model"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Side-by-Side Comparison Blocks */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 sm:mb-12">
+          {/* Traditional Fragmented Model */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-red-950/20 via-[#0D0D0D] to-[#070707] border border-red-500/20 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 flex-shrink-0 font-heading font-bold text-xs">
+                  ✕
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-red-400 uppercase tracking-widest block">
+                    Legacy Fragmentation
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                    Traditional Model
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {[
+                  'Separate Booking Tool',
+                  'Separate Website',
+                  'Separate Job Portal',
+                  'Separate Supplier Network',
+                  'Separate Marketing Tools',
+                  'Separate Customer Loyalty',
+                  'No Human Onboarding Layer',
+                  'Isolated Account Silos',
+                ].map((item, idx) => (
+                  <div key={idx} className="p-2.5 rounded-xl bg-white/[0.02] border border-white/[0.06] text-xs text-white/60 font-sans flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-400/80 flex-shrink-0" />
+                    <span className="truncate">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 pt-3 border-t border-white/10 text-xs text-red-300 font-sans italic">
+              High monthly costs, duplicated manual entries & lost client connections.
+            </div>
+          </div>
+
+          {/* Nexora Connected Model */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/35 shadow-[0_16px_48px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] flex-shrink-0 font-heading font-bold text-xs">
+                  ✓
+                </div>
+                <div>
+                  <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-widest block">
+                    Unified Ecosystem
+                  </span>
+                  <h3 className="text-xl sm:text-2xl font-heading font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-[#FFF2B2] to-[#DAAF37]">
+                    Nexora Connected Model
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {[
+                  'Discover Platform',
+                  'SalonOS Operations',
+                  'Free Branded Sites',
+                  '30+ Ready Templates',
+                  'Nexora Jobs Hub',
+                  'Nexora Market B2B',
+                  'Growth Partner Network',
+                  'Enterprise Scale',
+                ].map((item, idx) => (
+                  <div key={idx} className="p-2.5 rounded-xl bg-[#DAAF37]/[0.03] border border-[#DAAF37]/20 text-xs text-white font-heading font-semibold flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37] flex-shrink-0 shadow-[0_0_6px_#DAAF37]" />
+                    <span className="truncate">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 pt-3 border-t border-white/10 text-xs text-[#F4D03F] font-sans italic">
+              Free setup, automated retention, human field support & unified network growth.
+            </div>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/ecosystem"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Nexora Architecture
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 17 — MAIN WEBSITE MASTER STRUCTURE */}
+      <section
+        id="main-website-master-structure"
+        aria-label="Main Website Master Structure Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Compass className="w-3.5 h-3.5 text-[#F4D03F]" />
+            17. MAIN WEBSITE MASTER STRUCTURE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            Complete Domain Navigation &{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Destination Architecture
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            A structured breakdown of all 10 core domain destinations, primary ecosystem purposes, and primary user call-to-actions across the main platform.
+          </p>
+
+          {/* Quick Flow Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>10 Core Destinations</span>
+            <span className="text-[#DAAF37]/60">•</span>
+            <span>Customer, Merchant & Partner Portals</span>
+            <span className="text-[#DAAF37]/60">•</span>
+            <span>Targeted Conversion CTAs</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC MASTER STRUCTURE INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/main-website-master-structure-cinematic.webp"
+            alt="Current Main Website Master Structure - 10 Core Navigation Destinations: Home, Discover, Nexora Business, Nexora Sites, Templates, Nexora Jobs, Nexora Market, Nexora Rewards, Growth Partner, Enterprise"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Master Domain Navigation Table / Grid */}
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12 overflow-hidden">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Domain Navigation Blueprint
+              </span>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                Main Domain Navigation
+              </h3>
+            </div>
+            <span className="text-xs font-sans text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 self-start sm:self-auto font-medium">
+              10 Primary Master Destinations
+            </span>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs sm:text-sm font-sans">
+              <thead className="bg-[#DAAF37]/10 text-[#F4D03F] font-heading uppercase text-xs tracking-wider">
+                <tr>
+                  <th className="py-3.5 px-4 rounded-l-xl">Menu / Page</th>
+                  <th className="py-3.5 px-4">Purpose</th>
+                  <th className="py-3.5 px-4 rounded-r-xl">Main CTA</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/[0.06]">
+                {[
+                  { page: 'Home', purpose: 'Explain the complete Nexora ecosystem', cta: 'Join Nexora Free' },
+                  { page: 'Discover', purpose: 'Customer-facing salon, barber, spa, tattoo, clinic discovery', cta: 'Find services' },
+                  { page: 'Nexora Business', purpose: 'Salon owner dashboard, profile, bookings, growth', cta: 'List my business' },
+                  { page: 'Nexora Sites', purpose: 'Free website + 30+ templates', cta: 'Create my free website' },
+                  { page: 'Templates', purpose: 'Template gallery', cta: 'Choose a template' },
+                  { page: 'Nexora Jobs', purpose: 'Job seekers + salon recruiters', cta: 'Find jobs / Post a job' },
+                  { page: 'Nexora Market', purpose: 'Beauty products, suppliers, equipment, B2B commerce', cta: 'Explore market' },
+                  { page: 'Nexora Rewards', purpose: 'Customer points, tiers, redemption', cta: 'Explore rewards' },
+                  { page: 'Growth Partner', purpose: 'Dedicated recruitment + rewards + earning page', cta: 'Apply now' },
+                  { page: 'Enterprise', purpose: 'Chains, franchises, academies, larger brands', cta: 'Talk to sales' },
+                ].map((row, idx) => (
+                  <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
+                    <td className="py-3 px-4 font-heading font-bold text-white flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37] flex-shrink-0" />
+                      <span>{row.page}</span>
+                    </td>
+                    <td className="py-3 px-4 text-white/75">{row.purpose}</td>
+                    <td className="py-3 px-4">
+                      <span className="inline-block px-2.5 py-1 rounded-md bg-white/[0.04] border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold">
+                        {row.cta}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/products"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Product Portfolio Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 18 — HOMEPAGE POSITIONING REFERENCE */}
+      <section
+        id="homepage-positioning-reference"
+        aria-label="Homepage Positioning Reference Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
+            18. HOMEPAGE POSITIONING REFERENCE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-4 text-balance">
+            Beauty Meets Growth.{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Everything Connects.
+            </span>
+          </h2>
+
+          <p className="text-lg sm:text-xl font-heading font-semibold text-[#F4D03F] mb-5 tracking-tight">
+            Nexora — The Global Beauty Growth Network
+          </p>
+
+          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Discover services. Build your brand. Hire talent. Sell products. Earn rewards. Grow together.
+          </p>
+
+          {/* Hinglish Microcopy Callout Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#DAAF37]/15 via-black to-[#DAAF37]/10 border border-[#DAAF37]/40 shadow-[0_0_24px_rgba(218,175,55,0.15)] text-xs sm:text-sm font-sans font-medium text-white italic">
+            &ldquo;Beauty industry ka ek hi digital ecosystem—discovery se booking, business se jobs, marketplace se growth tak.&rdquo;
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC POSITIONING INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/homepage-positioning-cinematic.webp"
+            alt="Homepage Positioning Reference - Beauty Meets Growth. Everything Connects. Nexora - The Global Beauty Growth Network"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Core Positioning Pillars */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 sm:mb-12">
+          {[
+            { pillar: 'Discover', desc: 'Find local beauty services' },
+            { pillar: 'Build Brand', desc: 'Custom website & identity' },
+            { pillar: 'Hire Talent', desc: 'Verified beauty job hub' },
+            { pillar: 'Sell Products', desc: 'B2B wholesale network' },
+            { pillar: 'Earn Rewards', desc: 'Customer & partner tiers' },
+            { pillar: 'Grow Together', desc: 'Connected ecosystem OS' },
+          ].map((item, idx) => (
+            <div key={idx} className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-[#DAAF37]/40 transition-colors">
+              <div className="text-xs font-heading font-bold text-[#F4D03F] mb-1">
+                {item.pillar}
+              </div>
+              <div className="text-[11px] text-white/60 font-sans leading-snug">
+                {item.desc}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Visit Main Homepage
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 19 — MAIN DIFFERENTIATOR REFERENCE */}
+      <section
+        id="main-differentiator-reference"
+        aria-label="Main Differentiator Reference Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#F4D03F]" />
+            19. MAIN DIFFERENTIATOR REFERENCE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            The Unmatched{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Competitive Moat
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Free beauty website + 30+ templates + real Growth Partner-assisted onboarding + one connected beauty ecosystem.
+          </p>
+
+          {/* Differentiator Formula Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Free Beauty Website</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>30+ Templates</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>Real Growth Partner-Assisted Onboarding</span>
+            <span className="text-[#DAAF37]/60">+</span>
+            <span>One Connected Beauty Ecosystem</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC DIFFERENTIATOR INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/main-differentiator-cinematic.webp"
+            alt="Main Differentiator Reference - Free beauty website + 30+ templates + real Growth Partner-assisted onboarding + one connected beauty ecosystem"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. Core Principles & Guardrails Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 sm:mb-12">
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Ecosystem Entry Point
+            </span>
+            <h4 className="text-sm font-heading font-bold text-white mb-2">
+              Free Website Architecture
+            </h4>
+            <p className="text-xs text-white/60 font-sans leading-relaxed">
+              “Free website” alone does not define the entire brand — it serves as the zero-cost entry gateway into a connected operating network.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Ecosystem Module
+            </span>
+            <h4 className="text-sm font-heading font-bold text-white mb-2">
+              Growth Partner Network
+            </h4>
+            <p className="text-xs text-white/60 font-sans leading-relaxed">
+              Growth Partner rewards are presented as one structured operational module inside the ecosystem, not the singular identity of Nexora.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Verified Payout Model
+            </span>
+            <h4 className="text-sm font-heading font-bold text-white mb-2">
+              Actual Collections Standard
+            </h4>
+            <p className="text-xs text-white/60 font-sans leading-relaxed">
+              Payout wording and growth share distributions are strictly tied to actual eligible and verified company collections.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
+            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Strict Compliance
+            </span>
+            <h4 className="text-sm font-heading font-bold text-white mb-2">
+              Zero Speculative Claims
+            </h4>
+            <p className="text-xs text-white/60 font-sans leading-relaxed">
+              No unsupported guaranteed income wording or speculative financial projections — all figures reflect transparent performance criteria.
+            </p>
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/benefits"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore Ecosystem Benefits
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 20 — NEXORA MARKET REFERENCE */}
+      <section
+        id="nexora-market-reference"
+        aria-label="Nexora Market Reference Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <ShoppingBag className="w-3.5 h-3.5 text-[#F4D03F]" />
+            20. NEXORA MARKET REFERENCE
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            Wholesale & B2B{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Discovery Network
+            </span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
+            Direct wholesale product and equipment discovery across 12 beauty industry marketplace categories with zero middleman transaction commission.
+          </p>
+
+          {/* B2B Positioning Ribbon */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Current B2B Positioning:</span>
+            <span className="text-white font-bold">No Nexora Transaction Commission</span>
+          </div>
+        </div>
+
+        {/* 2. EXACT CINEMATIC MARKET REFERENCE INFOGRAPHIC IMAGE */}
+        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
+          <img
+            src="/assets/nexora-market-reference-cinematic.webp"
+            alt="Nexora Market Reference - 12 B2B Categories & No Transaction Commission Positioning"
+            width={1920}
+            height={960}
+            className="w-full h-auto object-cover select-none block"
+            loading="eager"
+          />
+        </div>
+
+        {/* 3. The 12 Marketplace Categories Grid */}
+        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Ecosystem B2B Categories
+              </span>
+              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+                12 Official Market Verticals
+              </h3>
+            </div>
+            <span className="text-xs font-sans text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 self-start sm:self-auto font-medium">
+              Zero Middleman Commission
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              '1. Hair & Styling',
+              '2. Skin & Cosmetics',
+              '3. Salon Furniture',
+              '4. Spa Equipment',
+              '5. Tattoo Supplies',
+              '6. Nail Products',
+              '7. Professional Tools',
+              '8. Disposable Supplies',
+              '9. Beauty Technology',
+              '10. Academy & Training',
+              '11. Wholesale Products',
+              '12. Brand Partnerships',
+            ].map((cat, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#DAAF37]/40 transition-colors group"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#DAAF37] flex-shrink-0 group-hover:scale-125 transition-transform" />
+                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90 group-hover:text-white truncate">
+                  {cat}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Action Banner */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+          <Button
+            to="/products#b2b"
+            variant="primary"
+            size="md"
+            icon={<ExternalLink className="w-4 h-4" />}
+          >
+            Explore B2B Network Specs
+          </Button>
+        </div>
+      </section>
+
+      {/* SECTION 21 — MARKET OPPORTUNITY */}
       <section
         id="market-opportunity"
         aria-label="Market Opportunity Section"
