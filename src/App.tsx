@@ -17,6 +17,7 @@ import { ProductsPage } from './pages/ProductsPage';
 import { ResearchPage } from './pages/ResearchPage';
 import { AboutPage } from './pages/AboutPage';
 import { InsightsPage } from './pages/InsightsPage';
+import { InvestorsPage } from './pages/InvestorsPage';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -43,6 +44,7 @@ function AnimatedRoutes() {
           <Route path="/market-research" element={<ResearchPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/investors" element={<InvestorsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </motion.div>
