@@ -14,6 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'beauty', fullLabel: 'Beauty Ecosystem', shortLabel: 'Beauty', route: '/beauty-ecosystem' },
   { id: 'verticals', fullLabel: 'Our Verticals', shortLabel: 'Verticals', route: '/verticals' },
   { id: 'products', fullLabel: 'Products & Platforms', shortLabel: 'Products', route: '/products' },
+  { id: 'investors', fullLabel: 'Investors', shortLabel: 'Investors', route: '/investors' },
   { id: 'research', fullLabel: 'Market Research & Differentiation', shortLabel: 'Research', route: '/market-research' },
   { id: 'about', fullLabel: 'About Nexora', shortLabel: 'About', route: '/about' },
   { id: 'insights', fullLabel: 'Insights / Research', shortLabel: 'Insights', route: '/insights' },

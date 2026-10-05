@@ -192,7 +192,7 @@ export const SiteHeader: React.FC = () => {
                 }
               >
                 <span>{item.fullLabel}</span>
-                <span className="text-xs font-sans text-white/40">0{idx + 1}</span>
+                <span className="text-xs font-sans text-white/40">{String(idx + 1).padStart(2, '0')}</span>
               </NavLink>
             ))}
           </div>
