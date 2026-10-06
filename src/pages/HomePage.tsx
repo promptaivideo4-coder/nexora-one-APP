@@ -8,6 +8,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import { EcosystemOverview } from '../components/home/EcosystemOverview';
 import { MultiVerticalsSection } from '../components/home/MultiVerticalsSection';
 import { TrustDifferentiationSection } from '../components/home/TrustDifferentiationSection';
@@ -40,7 +41,7 @@ export const HomePage: React.FC = () => {
             style={prefersReducedMotion ? {} : { y: visualY, scale: visualScale }}
             className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] 2xl:w-[58%] h-full origin-top-right will-change-transform"
           >
-            <img
+            <InteractiveImage
               src="/assets/hero-devices.webp"
               alt="Nexora One connected digital ecosystem"
               className="w-full h-full object-cover object-center lg:object-right-center scale-100"
@@ -222,7 +223,7 @@ export const HomePage: React.FC = () => {
 
         {/* Key Products Preview Visual Asset */}
         <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#DAAF37]/30 bg-[#0A0A0A] shadow-[0_12px_45px_rgba(0,0,0,0.8)] group">
-          <img
+          <InteractiveImage
             src="/assets/home-products-preview.webp"
             alt="Nexora One Key Products Preview - Customer App, SalonOS, White-Label, Growth Partner, B2B Marketplace"
             className="w-full h-auto object-cover object-center"

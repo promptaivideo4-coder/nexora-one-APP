@@ -7,6 +7,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Layout } from './components/layout/Layout';
+import { LightboxProvider } from './components/common/LightboxProvider';
 import { HomePage } from './pages/HomePage';
 import { VisionPage } from './pages/VisionPage';
 import { EcosystemPage } from './pages/EcosystemPage';
@@ -55,9 +56,11 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>
+      <LightboxProvider>
+        <Layout>
+          <AnimatedRoutes />
+        </Layout>
+      </LightboxProvider>
     </BrowserRouter>
   );
 }
