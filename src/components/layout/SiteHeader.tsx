@@ -173,8 +173,8 @@ export const SiteHeader: React.FC = () => {
 
       {/* Mobile Glass Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[61px] z-40 bg-[#0A0A0A]/95 backdrop-blur-2xl border-t border-white/[0.1] lg:hidden flex flex-col justify-between p-6 overflow-y-auto">
-          <div className="flex flex-col gap-2">
+        <div className="fixed inset-x-0 top-full bottom-0 z-[100] h-[calc(100dvh-100%)] max-h-[calc(100dvh-60px)] bg-[#0A0A0A]/98 backdrop-blur-2xl border-t border-white/[0.15] lg:hidden flex flex-col justify-between p-4 sm:p-6 pb-20 overflow-y-auto overscroll-contain shadow-[0_20px_50px_rgba(0,0,0,0.95)]">
+          <div className="flex flex-col gap-2 flex-shrink-0">
             <div className="text-xs uppercase font-heading font-semibold tracking-wider text-[#DAAF37] mb-2 px-3">
               Navigation
             </div>
@@ -197,7 +197,7 @@ export const SiteHeader: React.FC = () => {
             ))}
           </div>
 
-          <div className="pt-6 border-t border-white/[0.1] mt-6 flex flex-col gap-3">
+          <div className="pt-6 border-t border-white/[0.1] mt-6 flex flex-col gap-3 flex-shrink-0 pb-8">
             <Button
               to={HEADER_CTA.target}
               variant="primary"

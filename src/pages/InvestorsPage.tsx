@@ -43,6 +43,8 @@ import {
   UserMinus,
   Zap,
   Home,
+  Cpu,
+  Megaphone,
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
 
@@ -3579,10 +3581,10 @@ export const InvestorsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION 17 — MAIN WEBSITE MASTER STRUCTURE */}
+      {/* SECTION 17.1 — WHY INVESTMENT IS NEEDED */}
       <section
-        id="main-website-master-structure"
-        aria-label="Main Website Master Structure Section"
+        id="why-investment-is-needed"
+        aria-label="Why Investment Is Needed Section"
         className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
       >
         {/* Subtle Ambient Gold Glow */}
@@ -3591,524 +3593,1025 @@ export const InvestorsPage: React.FC = () => {
         {/* 1. Section Header & Heading */}
         <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
-            <Compass className="w-3.5 h-3.5 text-[#F4D03F]" />
-            17. MAIN WEBSITE MASTER STRUCTURE
+            <Zap className="w-3.5 h-3.5 text-[#F4D03F]" />
+            17.1. WHY INVESTMENT IS NEEDED
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
-            Complete Domain Navigation &{' '}
+            Why Investment Is{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
-              Destination Architecture
+              Needed
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-white/75 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
-            A structured breakdown of all 10 core domain destinations, primary ecosystem purposes, and primary user call-to-actions across the main platform.
+          <p className="text-base sm:text-lg text-white/85 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
+            Nexora One is building more than a single digital product. It is building a connected business ecosystem that brings customers, businesses, professionals, Growth Partners, suppliers and multiple service verticals together. To grow this ecosystem at scale, capital is needed for technology, business onboarding, customer acquisition, people, marketing, operations and expansion.
           </p>
 
-          {/* Quick Flow Ribbon */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
-            <span>10 Core Destinations</span>
-            <span className="text-[#DAAF37]/60">•</span>
-            <span>Customer, Merchant & Partner Portals</span>
-            <span className="text-[#DAAF37]/60">•</span>
-            <span>Targeted Conversion CTAs</span>
+          {/* Core Narrative Highlighted Statement */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#DAAF37]/15 via-[#121212] to-[#DAAF37]/10 border border-[#DAAF37]/40 shadow-[0_0_24px_rgba(218,175,55,0.2)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>Investment is not only for building software. Investment helps build: Technology + People + Business Network + Customer Network + Growth Partner Network + Market Expansion.</span>
           </div>
         </div>
 
-        {/* 2. EXACT CINEMATIC MASTER STRUCTURE INFOGRAPHIC IMAGE */}
-        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
-          <img
-            src="/assets/main-website-master-structure-cinematic.webp"
-            alt="Current Main Website Master Structure - 10 Core Navigation Destinations: Home, Discover, Nexora Business, Nexora Sites, Templates, Nexora Jobs, Nexora Market, Nexora Rewards, Growth Partner, Enterprise"
-            width={1920}
-            height={960}
-            className="w-full h-auto object-cover select-none block"
-            loading="eager"
-          />
-        </div>
-
-        {/* 3. Master Domain Navigation Table / Grid */}
-        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12 overflow-hidden">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
-            <div>
-              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-                Domain Navigation Blueprint
-              </span>
-              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
-                Main Domain Navigation
-              </h3>
-            </div>
-            <span className="text-xs font-sans text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 self-start sm:self-auto font-medium">
-              10 Primary Master Destinations
+        {/* 2. Visual Flow Connecting Investment Areas */}
+        <div className="mb-14 sm:mb-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)]">
+          <div className="text-center mb-8">
+            <span className="text-xs font-heading font-bold uppercase tracking-widest text-[#DAAF37] block mb-1">
+              Capital Deployment Architecture
             </span>
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
+              Capital Flow & Long-Term Ecosystem Value
+            </h3>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs sm:text-sm font-sans">
-              <thead className="bg-[#DAAF37]/10 text-[#F4D03F] font-heading uppercase text-xs tracking-wider">
-                <tr>
-                  <th className="py-3.5 px-4 rounded-l-xl">Menu / Page</th>
-                  <th className="py-3.5 px-4">Purpose</th>
-                  <th className="py-3.5 px-4 rounded-r-xl">Main CTA</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/[0.06]">
-                {[
-                  { page: 'Home', purpose: 'Explain the complete Nexora ecosystem', cta: 'Join Nexora Free' },
-                  { page: 'Discover', purpose: 'Customer-facing salon, barber, spa, tattoo, clinic discovery', cta: 'Find services' },
-                  { page: 'Nexora Business', purpose: 'Salon owner dashboard, profile, bookings, growth', cta: 'List my business' },
-                  { page: 'Nexora Sites', purpose: 'Free website + 30+ templates', cta: 'Create my free website' },
-                  { page: 'Templates', purpose: 'Template gallery', cta: 'Choose a template' },
-                  { page: 'Nexora Jobs', purpose: 'Job seekers + salon recruiters', cta: 'Find jobs / Post a job' },
-                  { page: 'Nexora Market', purpose: 'Beauty products, suppliers, equipment, B2B commerce', cta: 'Explore market' },
-                  { page: 'Nexora Rewards', purpose: 'Customer points, tiers, redemption', cta: 'Explore rewards' },
-                  { page: 'Growth Partner', purpose: 'Dedicated recruitment + rewards + earning page', cta: 'Apply now' },
-                  { page: 'Enterprise', purpose: 'Chains, franchises, academies, larger brands', cta: 'Talk to sales' },
-                ].map((row, idx) => (
-                  <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
-                    <td className="py-3 px-4 font-heading font-bold text-white flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37] flex-shrink-0" />
-                      <span>{row.page}</span>
-                    </td>
-                    <td className="py-3 px-4 text-white/75">{row.purpose}</td>
-                    <td className="py-3 px-4">
-                      <span className="inline-block px-2.5 py-1 rounded-md bg-white/[0.04] border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold">
-                        {row.cta}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* 4. Action Banner */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button
-            to="/products"
-            variant="primary"
-            size="md"
-            icon={<ExternalLink className="w-4 h-4" />}
-          >
-            Explore Product Portfolio Specs
-          </Button>
-        </div>
-      </section>
-
-      {/* SECTION 18 — HOMEPAGE POSITIONING REFERENCE */}
-      <section
-        id="homepage-positioning-reference"
-        aria-label="Homepage Positioning Reference Section"
-        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
-      >
-        {/* Subtle Ambient Gold Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
-
-        {/* 1. Section Header & Heading */}
-        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
-            <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
-            18. HOMEPAGE POSITIONING REFERENCE
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-4 text-balance">
-            Beauty Meets Growth.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
-              Everything Connects.
-            </span>
-          </h2>
-
-          <p className="text-lg sm:text-xl font-heading font-semibold text-[#F4D03F] mb-5 tracking-tight">
-            Nexora — The Global Beauty Growth Network
-          </p>
-
-          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
-            Discover services. Build your brand. Hire talent. Sell products. Earn rewards. Grow together.
-          </p>
-
-          {/* Hinglish Microcopy Callout Ribbon */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#DAAF37]/15 via-black to-[#DAAF37]/10 border border-[#DAAF37]/40 shadow-[0_0_24px_rgba(218,175,55,0.15)] text-xs sm:text-sm font-sans font-medium text-white italic">
-            &ldquo;Beauty industry ka ek hi digital ecosystem—discovery se booking, business se jobs, marketplace se growth tak.&rdquo;
-          </div>
-        </div>
-
-        {/* 2. EXACT CINEMATIC POSITIONING INFOGRAPHIC IMAGE */}
-        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
-          <img
-            src="/assets/homepage-positioning-cinematic.webp"
-            alt="Homepage Positioning Reference - Beauty Meets Growth. Everything Connects. Nexora - The Global Beauty Growth Network"
-            width={1920}
-            height={960}
-            className="w-full h-auto object-cover select-none block"
-            loading="eager"
-          />
-        </div>
-
-        {/* 3. Core Positioning Pillars */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 sm:mb-12">
-          {[
-            { pillar: 'Discover', desc: 'Find local beauty services' },
-            { pillar: 'Build Brand', desc: 'Custom website & identity' },
-            { pillar: 'Hire Talent', desc: 'Verified beauty job hub' },
-            { pillar: 'Sell Products', desc: 'B2B wholesale network' },
-            { pillar: 'Earn Rewards', desc: 'Customer & partner tiers' },
-            { pillar: 'Grow Together', desc: 'Connected ecosystem OS' },
-          ].map((item, idx) => (
-            <div key={idx} className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center hover:border-[#DAAF37]/40 transition-colors">
-              <div className="text-xs font-heading font-bold text-[#F4D03F] mb-1">
-                {item.pillar}
-              </div>
-              <div className="text-[11px] text-white/60 font-sans leading-snug">
-                {item.desc}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* 4. Action Banner */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button
-            to="/"
-            variant="primary"
-            size="md"
-            icon={<ExternalLink className="w-4 h-4" />}
-          >
-            Visit Main Homepage
-          </Button>
-        </div>
-      </section>
-
-      {/* SECTION 19 — MAIN DIFFERENTIATOR REFERENCE */}
-      <section
-        id="main-differentiator-reference"
-        aria-label="Main Differentiator Reference Section"
-        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
-      >
-        {/* Subtle Ambient Gold Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
-
-        {/* 1. Section Header & Heading */}
-        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#F4D03F]" />
-            19. MAIN DIFFERENTIATOR REFERENCE
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
-            The Unmatched{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
-              Competitive Moat
-            </span>
-          </h2>
-
-          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
-            Free beauty website + 30+ templates + real Growth Partner-assisted onboarding + one connected beauty ecosystem.
-          </p>
-
-          {/* Differentiator Formula Ribbon */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
-            <span>Free Beauty Website</span>
-            <span className="text-[#DAAF37]/60">+</span>
-            <span>30+ Templates</span>
-            <span className="text-[#DAAF37]/60">+</span>
-            <span>Real Growth Partner-Assisted Onboarding</span>
-            <span className="text-[#DAAF37]/60">+</span>
-            <span>One Connected Beauty Ecosystem</span>
-          </div>
-        </div>
-
-        {/* 2. EXACT CINEMATIC DIFFERENTIATOR INFOGRAPHIC IMAGE */}
-        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
-          <img
-            src="/assets/main-differentiator-cinematic.webp"
-            alt="Main Differentiator Reference - Free beauty website + 30+ templates + real Growth Partner-assisted onboarding + one connected beauty ecosystem"
-            width={1920}
-            height={960}
-            className="w-full h-auto object-cover select-none block"
-            loading="eager"
-          />
-        </div>
-
-        {/* 3. Core Principles & Guardrails Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 sm:mb-12">
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
-            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-              Ecosystem Entry Point
-            </span>
-            <h4 className="text-sm font-heading font-bold text-white mb-2">
-              Free Website Architecture
-            </h4>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              “Free website” alone does not define the entire brand — it serves as the zero-cost entry gateway into a connected operating network.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
-            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-              Ecosystem Module
-            </span>
-            <h4 className="text-sm font-heading font-bold text-white mb-2">
-              Growth Partner Network
-            </h4>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              Growth Partner rewards are presented as one structured operational module inside the ecosystem, not the singular identity of Nexora.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
-            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-              Verified Payout Model
-            </span>
-            <h4 className="text-sm font-heading font-bold text-white mb-2">
-              Actual Collections Standard
-            </h4>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              Payout wording and growth share distributions are strictly tied to actual eligible and verified company collections.
-            </p>
-          </div>
-
-          <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
-            <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-              Strict Compliance
-            </span>
-            <h4 className="text-sm font-heading font-bold text-white mb-2">
-              Zero Speculative Claims
-            </h4>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              No unsupported guaranteed income wording or speculative financial projections — all figures reflect transparent performance criteria.
-            </p>
-          </div>
-        </div>
-
-        {/* 4. Action Banner */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button
-            to="/benefits"
-            variant="primary"
-            size="md"
-            icon={<ExternalLink className="w-4 h-4" />}
-          >
-            Explore Ecosystem Benefits
-          </Button>
-        </div>
-      </section>
-
-      {/* SECTION 20 — NEXORA MARKET REFERENCE */}
-      <section
-        id="nexora-market-reference"
-        aria-label="Nexora Market Reference Section"
-        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
-      >
-        {/* Subtle Ambient Gold Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
-
-        {/* 1. Section Header & Heading */}
-        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
-            <ShoppingBag className="w-3.5 h-3.5 text-[#F4D03F]" />
-            20. NEXORA MARKET REFERENCE
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
-            Wholesale & B2B{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
-              Discovery Network
-            </span>
-          </h2>
-
-          <p className="text-sm sm:text-base text-white/80 font-sans max-w-2xl mx-auto leading-relaxed mb-6">
-            Direct wholesale product and equipment discovery across 12 beauty industry marketplace categories with zero middleman transaction commission.
-          </p>
-
-          {/* B2B Positioning Ribbon */}
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
-            <span>Current B2B Positioning:</span>
-            <span className="text-white font-bold">No Nexora Transaction Commission</span>
-          </div>
-        </div>
-
-        {/* 2. EXACT CINEMATIC MARKET REFERENCE INFOGRAPHIC IMAGE */}
-        <div className="mb-14 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.15)]">
-          <img
-            src="/assets/nexora-market-reference-cinematic.webp"
-            alt="Nexora Market Reference - 12 B2B Categories & No Transaction Commission Positioning"
-            width={1920}
-            height={960}
-            className="w-full h-auto object-cover select-none block"
-            loading="eager"
-          />
-        </div>
-
-        {/* 3. The 12 Marketplace Categories Grid */}
-        <div className="p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] mb-10 sm:mb-12">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
-            <div>
-              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
-                Ecosystem B2B Categories
-              </span>
-              <h3 className="text-xl sm:text-2xl font-heading font-bold text-white">
-                12 Official Market Verticals
-              </h3>
-            </div>
-            <span className="text-xs font-sans text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 self-start sm:self-auto font-medium">
-              Zero Middleman Commission
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-heading font-semibold text-white">
             {[
-              '1. Hair & Styling',
-              '2. Skin & Cosmetics',
-              '3. Salon Furniture',
-              '4. Spa Equipment',
-              '5. Tattoo Supplies',
-              '6. Nail Products',
-              '7. Professional Tools',
-              '8. Disposable Supplies',
-              '9. Beauty Technology',
-              '10. Academy & Training',
-              '11. Wholesale Products',
-              '12. Brand Partnerships',
-            ].map((cat, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#DAAF37]/40 transition-colors group"
-              >
-                <div className="w-2 h-2 rounded-full bg-[#DAAF37] flex-shrink-0 group-hover:scale-125 transition-transform" />
-                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90 group-hover:text-white truncate">
-                  {cat}
+              { label: 'INVESTMENT', highlight: true },
+              { label: 'TECHNOLOGY', highlight: false },
+              { label: 'CUSTOMER & BUSINESS ACQUISITION', highlight: false },
+              { label: 'GROWTH PARTNER NETWORK', highlight: false },
+              { label: 'ACTIVE ECOSYSTEM', highlight: false },
+              { label: 'MORE BUSINESS ACTIVITY', highlight: false },
+              { label: 'REVENUE & BUSINESS GROWTH', highlight: false },
+              { label: 'LONG-TERM ECOSYSTEM VALUE', highlight: true },
+            ].map((node, idx, arr) => (
+              <React.Fragment key={idx}>
+                <div className={`px-3.5 py-2.5 rounded-xl border ${node.highlight ? 'bg-[#DAAF37]/20 border-[#DAAF37]/50 text-[#F4D03F] shadow-[0_0_15px_rgba(218,175,55,0.25)]' : 'bg-white/[0.04] border-white/10 text-white/90'}`}>
+                  {node.label}
+                </div>
+                {idx < arr.length - 1 && (
+                  <span className="text-[#DAAF37] font-bold text-base">↓</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+          <p className="text-center text-xs text-white/60 font-sans mt-6 max-w-2xl mx-auto">
+            Investment is needed to build the network around the technology.
+          </p>
+        </div>
+
+        {/* 3. 7 Detailed Use-Case Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* 1. Technology & Product Development */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  01 / Foundation
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Build the Technology That Connects the Ecosystem
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Customer platforms',
+                  'Business tools',
+                  'Websites and apps',
+                  'Booking systems',
+                  'CRM',
+                  'Automation',
+                  'AI tools',
+                  'Payment / QR infrastructure',
+                  'Data and reporting',
+                  'Platform connectivity',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Technology is the foundation that connects more businesses, customers and services.&rdquo;
+            </div>
+          </div>
+
+          {/* 2. Customer Acquisition */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Users className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  02 / Demand
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                A Network Needs Customers
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Brand awareness',
+                  'Digital marketing',
+                  'Local discovery',
+                  'Customer onboarding',
+                  'Customer engagement',
+                  'Retention',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Bring customers into the ecosystem and keep them engaged.&rdquo;
+            </div>
+          </div>
+
+          {/* 3. Salon & Business Onboarding */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Store className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  03 / Merchants
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Bring Offline Businesses Into the Digital Network
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-3">
+                {[
+                  'Business identification',
+                  'Business onboarding',
+                  'Website/profile setup',
+                  'Services and portfolio setup',
+                  'Digital activation',
+                  'Business support',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="p-2.5 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-center text-xs font-heading font-semibold text-[#F4D03F] mb-3">
+                Free Website + 30+ Templates + Assisted Onboarding
+              </div>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Nexora reduces the barrier for small businesses to enter the digital economy.&rdquo;
+            </div>
+          </div>
+
+          {/* 4. Growth Partner Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Network className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  04 / Partners
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Scale Business Adoption Through a Human Network
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Partner recruitment',
+                  'Training',
+                  'Onboarding tools',
+                  'Field support',
+                  'Business activation',
+                  'Network expansion',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Growth Partners help local beauty businesses move from offline operations to connected digital business.&rdquo;
+            </div>
+          </div>
+
+          {/* 5. Marketing & Brand Building */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Megaphone className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  05 / Brand
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Make Nexora Easier to Discover
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Digital campaigns',
+                  'Video content',
+                  'Visual advertising',
+                  'Local promotion',
+                  'Business education',
+                  'Brand communication',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Build awareness around the Nexora ecosystem.&rdquo;
+            </div>
+          </div>
+
+          {/* 6. Team & Operations */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  06 / Operations
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                People Build and Support the Platform
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Scaling requires people across:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Technology',
+                  'Product development',
+                  'Customer support',
+                  'Business onboarding',
+                  'Growth Partner support',
+                  'Marketing',
+                  'Operations',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              Operational Infrastructure
+            </div>
+          </div>
+
+          {/* 7. New Vertical Development */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between md:col-span-2 lg:col-span-1">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  07 / Expansion
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Expand the Architecture Beyond the Core
+              </h3>
+              <p className="text-xs sm:text-sm text-white/75 font-sans leading-relaxed mb-3">
+                Beauty is the core entry ecosystem. The architecture can expand into additional local-service opportunities when the business and market are ready.
+              </p>
+              <div className="text-xs text-white/70 font-sans mb-2">Examples:</div>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'No Broker Real Estate',
+                  'Food Delivery',
+                  'Other Local-Commerce Opportunities',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Expansion should be based on business readiness and market opportunity, not launching everything at once.&rdquo;
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 17.2 — WHAT THE INVESTMENT BUILDS */}
+      <section
+        id="what-the-investment-builds"
+        aria-label="What the Investment Builds Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <Layers className="w-3.5 h-3.5 text-[#F4D03F]" />
+            17.2. WHAT THE INVESTMENT BUILDS
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            What the Investment{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Builds
+            </span>
+          </h2>
+
+          <p className="text-base sm:text-lg text-white/85 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
+            Investment will help Nexora strengthen the technology, business network, customer network, Growth Partner network and ecosystem infrastructure needed to grow the platform and expand into new opportunities.
+          </p>
+
+          {/* Core Investment Flow Highlight */}
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-white/[0.05] via-[#121212] to-white/[0.05] border border-[#DAAF37]/35 shadow-[0_0_24px_rgba(218,175,55,0.12)] text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <span>INVESTMENT</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>BUILD</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>CONNECT</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>GROW</span>
+            <span className="text-[#DAAF37]/60">→</span>
+            <span>EXPAND</span>
+          </div>
+        </div>
+
+        {/* 2. 8 Core Building Blocks Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {/* 1. Technology Foundation */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  01 / Infrastructure
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Build the Digital Infrastructure
+              </h3>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can strengthen:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Customer-facing platforms',
+                  'Business platforms',
+                  'Websites and apps',
+                  'Booking systems',
+                  'CRM',
+                  'Automation',
+                  'AI tools',
+                  'QR / payment systems',
+                  'Reporting and analytics',
+                  'Shared ecosystem infrastructure',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Technology connects the different parts of Nexora and makes the ecosystem easier to use and scale.&rdquo;
+            </div>
+          </div>
+
+          {/* 2. Business Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Store className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  02 / Businesses
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Connect More Businesses
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                LOCAL BUSINESS → DIGITAL PRESENCE → BOOKING TOOLS → ACTIVE BUSINESS → ECOSYSTEM
+              </div>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment helps bring more local beauty businesses into the digital network via:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Business onboarding',
+                  'Website setup',
+                  '30+ templates',
+                  'Business profile setup',
+                  'Service catalogue',
+                  'Digital activation',
+                  'Ongoing business support',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              Merchant Adoption Layer
+            </div>
+          </div>
+
+          {/* 3. Customer Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Users className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  03 / Customers
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Bring More Customers Into the Ecosystem
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                DISCOVER → BOOK → VISIT → REVIEW → REWARD → REBOOK
+              </div>
+              <p className="text-xs text-white/75 font-sans leading-relaxed mb-4">
+                Investment can support customer awareness, discovery, onboarding, engagement and retention without inventing customer-count numbers.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              Consumer Retention Flywheel
+            </div>
+          </div>
+
+          {/* 4. Growth Partner Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Network className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  04 / Partners
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Expand the Human Adoption Network
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                GROWTH PARTNER → ONBOARDING → ACTIVATION → SUPPORT → EXPANSION
+              </div>
+              <p className="text-xs text-white/70 font-sans mb-3">
+                Investment can support:
+              </p>
+              <ul className="space-y-1.5 text-xs text-white/80 font-sans mb-4">
+                {[
+                  'Growth Partner recruitment',
+                  'Training',
+                  'Partner tools',
+                  'Onboarding support',
+                  'Field support',
+                  'Business activation',
+                  'Network expansion',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Growth Partners help local beauty businesses move from offline operations to connected digital business.&rdquo;
+            </div>
+          </div>
+
+          {/* 5. Professional Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  05 / Talent
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Connect Businesses With Talent
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                BUSINESS ↔ PROFESSIONAL ↔ JOB OPPORTUNITY
+              </div>
+              <p className="text-xs text-white/75 font-sans leading-relaxed mb-4">
+                Investment can strengthen the Nexora Jobs layer so beauty businesses can hire and professionals can discover relevant opportunities.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              Employment & Skill Layer
+            </div>
+          </div>
+
+          {/* 6. B2B Beauty Network */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <ShoppingBag className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  06 / B2B Supply
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Connect Brands, Suppliers and Beauty Businesses
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                BRAND → SUPPLIER / DISTRIBUTOR → BEAUTY BUSINESS
+              </div>
+              <p className="text-xs text-white/75 font-sans leading-relaxed mb-3">
+                Strengthens B2B discovery across 12 official beauty market categories on a listing/discovery/connection model with zero commission.
+              </p>
+              <div className="text-[11px] text-white/60 font-sans italic">
+                Hair & Styling, Skin & Cosmetics, Salon Furniture, Spa Equipment, Tattoo Supplies, Nail Products, Professional Tools, Disposable Supplies, Beauty Technology, Academy & Training, Wholesale Products, Brand Partnerships.
+              </div>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              No-Commission B2B Discovery
+            </div>
+          </div>
+
+          {/* 7. Digital Services & Advertising */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Globe className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  07 / Revenue
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Build Additional Direct Revenue Channels
+              </h3>
+              <div className="space-y-3 text-xs text-white/80 font-sans mb-3">
+                <div>
+                  <span className="font-heading font-bold text-[#DAAF37] block">IT / Digital Services:</span>
+                  Landing Page, Multi-page Website, Full-stack Website, AI / Automation / CRM solutions.
+                </div>
+                <div>
+                  <span className="font-heading font-bold text-[#DAAF37] block">Nexora Advertising:</span>
+                  Video Ads, Poster / Banner Ads, Business Promotions, Brand Campaigns.
+                </div>
+              </div>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37]">
+              Direct Revenue Layers
+            </div>
+          </div>
+
+          {/* 8. Multi-Vertical Expansion */}
+          <div className="p-6 sm:p-7 rounded-2xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 hover:border-[#DAAF37]/40 transition-all flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
+                  <Building2 className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
+                  08 / Expansion
+                </span>
+              </div>
+              <h3 className="text-lg font-heading font-bold text-white mb-2">
+                Prepare the Architecture for New Opportunities
+              </h3>
+              <div className="text-[10px] text-[#DAAF37] font-heading font-semibold mb-2">
+                BEAUTY → REAL ESTATE → FOOD → OTHER LOCAL-COMMERCE OPPORTUNITIES
+              </div>
+              <p className="text-xs sm:text-sm text-white/75 font-sans leading-relaxed mb-3">
+                Beauty is the core ecosystem. The same technology and network architecture can support additional service verticals as the business becomes ready.
+              </p>
+              <div className="text-xs text-white/70 font-sans mb-1">Current examples: No Broker Real Estate, Food Delivery (after defined member milestone), other local-commerce opportunities.</div>
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] text-xs font-heading font-semibold text-[#DAAF37] italic">
+              &ldquo;Expansion should be based on business readiness and market opportunity, not launching everything at once.&rdquo;
+            </div>
+          </div>
+        </div>
+
+        {/* 3. The Complete Investment Build Flow Visual */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] text-center">
+          <span className="text-xs font-heading font-bold uppercase tracking-widest text-[#DAAF37] block mb-1">
+            End-to-End Capital Journey
+          </span>
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-6">
+            The Complete Investment Build Flow
+          </h3>
+
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-heading font-semibold text-white mb-8">
+            {[
+              'INVESTMENT',
+              'TECHNOLOGY',
+              'BUSINESS ONBOARDING',
+              'GROWTH PARTNER NETWORK',
+              'MORE ACTIVE BUSINESSES',
+              'CUSTOMER NETWORK',
+              'PROFESSIONAL NETWORK',
+              'B2B NETWORK',
+              'ECOSYSTEM ACTIVITY',
+              'BUSINESS GROWTH',
+              'FUTURE EXPANSION',
+            ].map((node, idx, arr) => (
+              <React.Fragment key={idx}>
+                <div className={`px-3 py-2 rounded-xl border ${idx === 0 || idx === arr.length - 1 ? 'bg-[#DAAF37]/20 border-[#DAAF37]/50 text-[#F4D03F]' : 'bg-white/[0.04] border-white/10 text-white/90'}`}>
+                  {node}
+                </div>
+                {idx < arr.length - 1 && (
+                  <span className="text-[#DAAF37] font-bold text-base">↓</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
+          {/* Key Investor Message */}
+          <div className="max-w-3xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-[#DAAF37]/15 via-black to-[#DAAF37]/15 border border-[#DAAF37]/40 shadow-[0_0_24px_rgba(218,175,55,0.2)]">
+            <h4 className="text-base sm:text-lg font-heading font-bold text-white mb-2">
+              Investment is used to build the network around the technology — not only the technology itself.
+            </h4>
+            <p className="text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+              Technology + People + Businesses + Customers + Professionals + Partners + Market = Connected Ecosystem
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 17.3 — INVESTMENT OPPORTUNITY */}
+      <section
+        id="investment-opportunity"
+        aria-label="Investment Opportunity Section"
+        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
+      >
+        {/* Subtle Ambient Gold Glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[450px] bg-gradient-to-b from-[#DAAF37]/[0.08] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
+
+        {/* 1. Section Header & Heading */}
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+            <TrendingUp className="w-3.5 h-3.5 text-[#F4D03F]" />
+            17.3. INVESTMENT OPPORTUNITY
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
+            Investment{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Opportunity
+            </span>
+          </h2>
+
+          <p className="text-base sm:text-lg text-white/85 font-sans max-w-3xl mx-auto leading-relaxed mb-6">
+            Nexora is building a multi-layer digital ecosystem with Beauty as the core entry market and additional service and expansion opportunities around it. Investment is intended to support technology, business onboarding, customer acquisition, Growth Partner network expansion, marketing, team and operations, and future ecosystem expansion. The investment opportunity should be presented as a structured business investment discussion, not as a guaranteed-return offer.
+          </p>
+        </div>
+
+        {/* Part 1 — Investment Summary Card */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/35 shadow-[0_16px_48px_rgba(0,0,0,0.7)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Executive Overview
+              </span>
+              <h3 className="text-2xl font-heading font-bold text-white">
+                Investment Summary
+              </h3>
+            </div>
+            <span className="text-xs font-heading font-semibold text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30">
+              Structured Business Discussion
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { label: 'Total Capital Required', value: '[TO BE FINALIZED]' },
+              { label: 'Minimum Investment', value: '[TO BE FINALIZED]' },
+              { label: 'Investment Structure', value: '[TO BE FINALIZED]' },
+              { label: 'Equity / Ownership Offered', value: '[TO BE FINALIZED]' },
+              { label: 'Investment Period', value: '[TO BE FINALIZED]' },
+              { label: 'Investor Category', value: '[TO BE FINALIZED]' },
+            ].map((item, idx) => (
+              <div key={idx} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+                <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-white/50 block mb-1.5">
+                  {item.label}
+                </span>
+                <div className="text-lg sm:text-xl font-heading font-bold text-[#F4D03F]">
+                  {item.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Part 2 — Why This Investment */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-4">
+            Why Invest in Nexora?
+          </h3>
+          <p className="text-sm text-white/80 font-sans leading-relaxed mb-6">
+            The opportunity is based on building a connected ecosystem rather than a single standalone product. Key pillars include:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
+            {[
+              'Beauty as the core entry ecosystem',
+              'Customer network',
+              'Business network',
+              'Professional / Jobs network',
+              'Growth Partner network',
+              'Beauty B2B network',
+              'Digital / IT services',
+              'Advertising layer',
+              'Expansion architecture',
+            ].map((pillar, idx) => (
+              <div key={idx} className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-[#DAAF37] flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90">{pillar}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-[#DAAF37]/15 via-black to-[#DAAF37]/15 border border-[#DAAF37]/40 text-center">
+            <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+              Core Strategic Thesis
+            </span>
+            <div className="text-base sm:text-lg font-heading font-bold text-[#F4D03F]">
+              One company → Multiple connected business layers → Multiple opportunities for growth
+            </div>
+          </div>
+        </div>
+
+        {/* Part 3 — What the Capital Supports */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-2">
+            Capital Deployment Focus Areas
+          </h3>
+          <p className="text-xs text-white/60 font-sans mb-6">
+            Final percentages are subject to final agreement approval.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { area: 'Marketing & Growth', status: '[TO BE FINALIZED]' },
+              { area: 'Technology & Infrastructure', status: '[TO BE FINALIZED]' },
+              { area: 'Team & Operations', status: '[TO BE FINALIZED]' },
+              { area: 'Business / Salon Onboarding', status: '[TO BE FINALIZED]' },
+              { area: 'Growth Partner Network', status: '[TO BE FINALIZED]' },
+              { area: 'Reserve / Expansion', status: '[TO BE FINALIZED]' },
+            ].map((item, idx) => (
+              <div key={idx} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-between">
+                <span className="text-xs sm:text-sm font-heading font-bold text-white">{item.area}</span>
+                <span className="text-xs font-heading font-semibold text-[#F4D03F] px-2.5 py-1 rounded-md bg-[#DAAF37]/10 border border-[#DAAF37]/30">
+                  {item.status}
                 </span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* 4. Action Banner */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button
-            to="/products#b2b"
-            variant="primary"
-            size="md"
-            icon={<ExternalLink className="w-4 h-4" />}
-          >
-            Explore B2B Network Specs
-          </Button>
-        </div>
-      </section>
+        {/* Part 4 — Valuation Basis */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-4">
+            How the Valuation Will Be Considered
+          </h3>
+          <p className="text-sm text-white/80 font-sans leading-relaxed mb-6">
+            The valuation framework will consider the combined business strength across multiple pillars without claiming that valuation is fixed prematurely:
+          </p>
 
-      {/* SECTION 21 — MARKET OPPORTUNITY */}
-      <section
-        id="market-opportunity"
-        aria-label="Market Opportunity Section"
-        className="relative py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-[1440px] mx-auto w-full border-t border-white/10"
-      >
-        {/* Subtle Ambient Gold Glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[400px] bg-gradient-to-b from-[#DAAF37]/[0.06] via-transparent to-transparent blur-[140px] pointer-events-none rounded-full" />
-
-        {/* Header Area */}
-        <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4 shadow-[0_0_20px_rgba(218,175,55,0.15)]">
-            <BarChart3 className="w-3.5 h-3.5 text-[#F4D03F]" />
-            MARKET OPPORTUNITY
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {[
+              'Existing revenue streams',
+              'Active Beauty ecosystem',
+              'Paid IT / Digital Services',
+              'Main Website Advertising',
+              'Existing technology and product infrastructure',
+              'Ready/advanced service-based verticals',
+              'Multi-vertical expansion potential',
+              'Business network and Growth Partner model',
+              'Scalability of the connected ecosystem',
+            ].map((val, idx) => (
+              <div key={idx} className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-3">
+                <span className="w-5 h-5 rounded-full bg-[#DAAF37]/15 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F] text-[10px] font-bold flex-shrink-0">
+                  {idx + 1}
+                </span>
+                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90">{val}</span>
+              </div>
+            ))}
           </div>
+        </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5 text-balance">
-            Beauty & Wellness Sector{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
-              Growth Trajectory
-            </span>
-          </h2>
+        {/* Part 5 — Business Value Structure */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10 text-center">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-6">
+            Nexora Business Value Structure
+          </h3>
 
-          <p className="text-sm sm:text-base text-white/70 font-sans max-w-2xl mx-auto leading-relaxed">
-            The beauty services and salon ecosystem continues to demonstrate robust resilience and sustained consumer demand, while the structural migration from offline fragmented operations to integrated digital platforms represents the primary growth catalyst.
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-heading font-semibold text-white mb-6">
+            {[
+              'Beauty Ecosystem',
+              'Digital / IT Services',
+              'Advertising',
+              'Business Network',
+              'Professional Network',
+              'B2B Network',
+              'Service-Based Expansion',
+              'Technology Infrastructure',
+            ].map((layer, idx, arr) => (
+              <React.Fragment key={idx}>
+                <div className="px-3 py-2 rounded-xl bg-white/[0.04] border border-white/10 text-white/90">
+                  {layer}
+                </div>
+                {idx < arr.length - 1 && (
+                  <span className="text-[#DAAF37] font-bold">+</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="text-[#DAAF37] font-bold text-xl mb-3">↓</div>
+          <div className="inline-block px-6 py-3 rounded-2xl bg-[#DAAF37]/20 border border-[#DAAF37]/50 text-[#F4D03F] text-base font-heading font-bold shadow-[0_0_20px_rgba(218,175,55,0.25)]">
+            Connected Business Platform
+          </div>
+          <p className="text-xs text-white/70 font-sans mt-4 max-w-2xl mx-auto">
+            The investment is being evaluated against the broader business architecture, not only one product.
           </p>
         </div>
 
-        {/* 3 High-Level Macro Indicator Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 sm:mb-12">
-          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/80 border border-white/10 shadow-[0_12px_36px_rgba(0,0,0,0.6)] relative overflow-hidden group hover:border-[#DAAF37]/40 transition-colors">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
-                Sector Expansion
-              </span>
-              <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
-                <ArrowUpRight className="w-4 h-4" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2">
-              Sustained Demand
-            </div>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              Personal grooming, hair care, spa treatments, and aesthetic wellness demonstrate non-cyclical consumer stickiness and strong retention dynamics globally.
-            </p>
-          </div>
+        {/* Part 6 — Investment → Value Creation Flow */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.7)] text-center">
+          <span className="text-xs font-heading font-bold uppercase tracking-widest text-[#DAAF37] block mb-1">
+            Value Creation Mechanics
+          </span>
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-6">
+            Investment → Value Creation Flow
+          </h3>
 
-          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/80 border border-white/10 shadow-[0_12px_36px_rgba(0,0,0,0.6)] relative overflow-hidden group hover:border-[#DAAF37]/40 transition-colors">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
-                Digital Migration
-              </span>
-              <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
-                <Sparkles className="w-4 h-4" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2">
-              Digital Workflows
-            </div>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              Accelerating transition from pen-and-paper diaries, phone tag, and scattered DMs into automated cloud scheduling, unified CRM, and customer recall.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/80 border border-white/10 shadow-[0_12px_36px_rgba(0,0,0,0.6)] relative overflow-hidden group hover:border-[#DAAF37]/40 transition-colors">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-heading font-bold text-[#DAAF37] uppercase tracking-wider">
-                Ecosystem Efficiency
-              </span>
-              <div className="w-8 h-8 rounded-lg bg-[#DAAF37]/10 border border-[#DAAF37]/30 flex items-center justify-center text-[#F4D03F]">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-            </div>
-            <div className="text-2xl sm:text-3xl font-heading font-bold text-white mb-2">
-              Unified Network Value
-            </div>
-            <p className="text-xs text-white/60 font-sans leading-relaxed">
-              Consolidating customer discovery, salon management, professional verification, and wholesale B2B procurement unlocks compounding platform network effects.
-            </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-heading font-semibold text-white mb-4">
+            {[
+              'INVESTMENT',
+              'TECHNOLOGY + PEOPLE',
+              'BUSINESS ONBOARDING',
+              'CUSTOMER & PROFESSIONAL NETWORK',
+              'GROWTH PARTNER EXPANSION',
+              'ECOSYSTEM ACTIVITY',
+              'REVENUE / BUSINESS GROWTH',
+              'LONG-TERM COMPANY VALUE',
+            ].map((node, idx, arr) => (
+              <React.Fragment key={idx}>
+                <div className={`px-3 py-2 rounded-xl border ${idx === 0 || idx === arr.length - 1 ? 'bg-[#DAAF37]/20 border-[#DAAF37]/50 text-[#F4D03F]' : 'bg-white/[0.04] border-white/10 text-white/90'}`}>
+                  {node}
+                </div>
+                {idx < arr.length - 1 && (
+                  <span className="text-[#DAAF37] font-bold text-base">↓</span>
+                )}
+              </React.Fragment>
+            ))}
           </div>
         </div>
 
-        {/* 4 Structural Market Drivers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            {
-              title: 'Mobile-First Discovery',
-              desc: 'Consumers expect real-time availability, portfolio galleries, and frictionless appointment confirmations.',
-            },
-            {
-              title: 'Operational Automation',
-              desc: 'Salons are shifting budget from offline marketing into software that automates client recall and fills empty chairs.',
-            },
-            {
-              title: 'B2B Marketplace Integration',
-              desc: 'Brands seek transparent, direct supply channels over uncoordinated field reps and static catalogues.',
-            },
-            {
-              title: 'Professional Micro-Economy',
-              desc: 'Beauty professionals are demanding portable reputation profiles, direct client bookings, and flexible opportunities.',
-            },
-          ].map((driver, idx) => (
-            <div key={idx} className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-[#DAAF37]/30 transition-colors">
-              <div className="text-xs font-heading font-bold text-[#DAAF37] mb-1">
-                0{idx + 1}. {driver.title}
+        {/* Part 7 — Milestone-Based Funding / Tranches */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-2">
+            Milestone-Based Funding Structure
+          </h3>
+          <p className="text-xs text-white/60 font-sans mb-6">
+            Milestone-based funding structure — details to be finalized with the investment agreement.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { stage: 'Stage 1', title: 'Capital Release', desc: 'Initial Technology / Operations / Market Expansion' },
+              { stage: 'Stage 2', title: 'Performance Milestone', desc: 'Next Capital Release' },
+              { stage: 'Stage 3', title: 'Network / Business Milestone', desc: 'Next Capital Release' },
+              { stage: 'Stage 4', title: 'Expansion Milestone', desc: 'Further Capital Deployment' },
+            ].map((stg, idx) => (
+              <div key={idx} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/30 transition-colors">
+                <span className="text-[11px] font-heading font-bold text-[#DAAF37] uppercase tracking-wider block mb-1">
+                  {stg.stage}
+                </span>
+                <h4 className="text-sm font-heading font-bold text-white mb-1">
+                  {stg.title}
+                </h4>
+                <p className="text-xs text-white/60 font-sans">
+                  {stg.desc}
+                </p>
               </div>
-              <p className="text-[11px] text-white/60 font-sans leading-relaxed">
-                {driver.desc}
-              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* Part 8 — Investor Capital Protection / Discipline */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.04] via-[#0D0D0D] to-[#070707] border border-white/10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-4">
+            Capital Deployment Discipline
+          </h3>
+          <p className="text-sm text-white/80 font-sans leading-relaxed mb-6">
+            Nexora maintains rigorous governance and capital discipline standards:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              'Capital should be linked to defined business priorities.',
+              'Major expansion should follow business readiness.',
+              'Performance and progress should be tracked.',
+              'Financial reporting should support investor visibility.',
+              'Capital use should remain aligned with the approved business plan.',
+            ].map((disc, idx) => (
+              <div key={idx} className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-[#DAAF37] flex-shrink-0" />
+                <span className="text-xs sm:text-sm font-heading font-semibold text-white/90">{disc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Part 9 — Investment Structure Placeholder */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/35 shadow-[0_16px_48px_rgba(0,0,0,0.7)]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
+            <div>
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#DAAF37] block mb-1">
+                Terms Breakdown
+              </span>
+              <h3 className="text-2xl font-heading font-bold text-white">
+                Proposed Investment Structure
+              </h3>
             </div>
-          ))}
+            <span className="text-xs font-heading font-semibold text-[#F4D03F] px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30">
+              Pending Final Approval
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { label: 'Investment Amount', value: '[TO BE FINALIZED]' },
+              { label: 'Ownership / Equity', value: '[TO BE FINALIZED]' },
+              { label: 'Valuation', value: '[TO BE FINALIZED]' },
+              { label: 'Minimum Ticket', value: '[TO BE FINALIZED]' },
+              { label: 'Investment Period', value: '[TO BE FINALIZED]' },
+              { label: 'Funding Method', value: '[TO BE FINALIZED]' },
+            ].map((term, idx) => (
+              <div key={idx} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+                <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-white/50 block mb-1.5">
+                  {term.label}
+                </span>
+                <div className="text-lg sm:text-xl font-heading font-bold text-[#F4D03F]">
+                  {term.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Part 10 — Investor Message */}
+        <div className="p-8 rounded-3xl bg-gradient-to-r from-[#DAAF37]/20 via-black to-[#DAAF37]/20 border border-[#DAAF37]/50 text-center shadow-[0_0_40px_rgba(218,175,55,0.2)]">
+          <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-3">
+            Invest in the Network, Not Just the Product.
+          </h3>
+          <p className="text-sm sm:text-base font-sans text-white/85 max-w-2xl mx-auto leading-relaxed">
+            Nexora&apos;s investment opportunity is based on building the technology, business relationships, customer network, professional network and expansion infrastructure required to create a connected digital ecosystem.
+          </p>
         </div>
       </section>
     </div>

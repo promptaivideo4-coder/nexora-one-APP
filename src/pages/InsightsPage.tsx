@@ -20,7 +20,7 @@ import { INSIGHT_CATEGORIES, INSIGHTS_DATA } from '../data/insights';
 
 export const InsightsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedId, setExpandedId] = useState<string | null>('ins-01');
+  const [expandedId, setExpandedId] = useState<string | null>('ins-all-01');
 
   const filteredInsights =
     selectedCategory === 'All'
