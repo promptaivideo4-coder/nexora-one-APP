@@ -16,6 +16,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import { ECOSYSTEM_NODES, ECOSYSTEM_LAYERS } from '../data/ecosystem';
 
 export const EcosystemPage: React.FC = () => {
@@ -63,7 +64,7 @@ export const EcosystemPage: React.FC = () => {
       <section className="pt-2 pb-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="relative overflow-hidden rounded-2xl bg-transparent">
-            <img
+            <InteractiveImage
               src="/assets/nexora-ecosystem-network.webp"
               alt="Nexora One Connected Digital Ecosystem Network Architecture"
               className="w-full h-auto object-contain select-none"

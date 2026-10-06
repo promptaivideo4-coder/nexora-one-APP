@@ -150,12 +150,12 @@ export const SiteHeader: React.FC = () => {
         </div>
 
         {/* Mobile Menu Trigger (< 1024px) */}
-        <div className="flex lg:hidden items-center gap-3">
+        <div className="flex lg:hidden items-center gap-2">
           <Button
             to={HEADER_CTA.target}
             variant="primary"
             size="sm"
-            className="text-xs px-3 py-1.5 sm:hidden whitespace-nowrap"
+            className="text-[10px] sm:text-xs px-2.5 py-1 sm:px-3 sm:py-1.5 whitespace-nowrap"
           >
             Ecosystem
           </Button>

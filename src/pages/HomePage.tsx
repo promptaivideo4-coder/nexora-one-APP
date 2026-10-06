@@ -88,16 +88,16 @@ export const HomePage: React.FC = () => {
                 CONNECTED DIGITAL ECOSYSTEM
               </div>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold tracking-tight text-[#F5F5F5] leading-[1.08] mb-3">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold tracking-tight text-[#F5F5F5] leading-[1.08] mb-3">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] via-[#F4D03F] to-[#DAAF37]">
                   NEXORA ONE
                 </span>
-                <span className="block text-2xl sm:text-3xl lg:text-4xl font-serif font-normal text-white/90 mt-1.5">
+                <span className="block text-xl sm:text-3xl lg:text-4xl font-serif font-normal text-white/90 mt-1.5">
                   A Connected Digital Ecosystem
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg text-white/75 font-sans leading-relaxed max-w-xl mb-6">
+              <p className="text-xs sm:text-lg text-white/75 font-sans leading-relaxed max-w-xl mb-6">
                 Empowering Customers, Businesses, Professionals, Partners and Brands through Technology.
               </p>
 

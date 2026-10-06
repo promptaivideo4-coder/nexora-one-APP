@@ -122,19 +122,19 @@ export const MultiVerticalsSection: React.FC = () => {
                     loading="lazy"
                   />
 
-                  {/* Dark Gradient Fading Toward Bottom for Crystal Clear Typography */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#0A0A0A]/80 via-45% to-transparent pointer-events-none" />
+                  {/* Dark Gradient Fading Toward Bottom for Crystal Clear Typography (Subtle 20% overlay) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/15 to-transparent pointer-events-none" />
                   
                   {/* Inner Glass Highlights */}
-                  <div className="absolute inset-0 bg-radial from-transparent to-black/40 pointer-events-none" />
+                  <div className="absolute inset-0 bg-radial from-transparent to-black/20 pointer-events-none" />
 
                   {/* Card Content & Action Button */}
                   <div className="relative z-10 flex items-end justify-between gap-2 mt-auto pt-8">
                     <div className="flex-1 pr-1">
-                      <h3 className="text-base sm:text-lg font-heading font-semibold text-white tracking-tight leading-snug group-hover:text-[#F4D03F] transition-colors">
+                      <h3 className="text-base sm:text-lg font-heading font-semibold text-white tracking-tight leading-snug group-hover:text-[#F4D03F] transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
                         {card.title}
                       </h3>
-                      <p className="text-xs text-white/70 font-sans tracking-wide mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+                      <p className="text-xs text-white/95 font-sans tracking-wide mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis drop-shadow-[0_1.5px_3px_rgba(0,0,0,0.9)]">
                         {card.subtitle}
                       </p>
                     </div>

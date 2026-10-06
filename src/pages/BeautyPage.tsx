@@ -19,6 +19,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn, StaggerContainer, StaggerItem } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 
 export const BeautyPage: React.FC = () => {
   const endToEndFlow = [
@@ -138,7 +139,7 @@ export const BeautyPage: React.FC = () => {
 
           {/* Panoramic Hero Visual Display */}
           <div className="relative max-w-6xl mx-auto rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.9)]">
-            <img
+            <InteractiveImage
               src="/assets/beauty-ecosystem-hero.webp"
               alt="Nexora Beauty Ecosystem Panorama - Hair, Wellness, Makeup, Nails, Styling, Spa"
               className="w-full h-auto object-contain select-none"

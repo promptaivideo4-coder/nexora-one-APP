@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react';
-import { X, ZoomIn, ZoomOut, RotateCcw, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
+import { X, ZoomIn, ZoomOut, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LightboxImage {
   src: string;
@@ -20,7 +20,12 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
+  
   const dragStart = useRef({ x: 0, y: 0 });
+  const touchStartDist = useRef<number | null>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const lastTapTime = useRef<number>(0);
 
   const openLightbox = useCallback((imgs: LightboxImage[], index = 0) => {
     setImages(imgs);
@@ -38,7 +43,7 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     document.body.style.overflow = 'auto';
   }, []);
 
-  const nextImage = useCallback((e?: React.MouseEvent) => {
+  const nextImage = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
     e?.stopPropagation();
     if (images.length <= 1) return;
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -46,7 +51,7 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setPan({ x: 0, y: 0 });
   }, [images.length]);
 
-  const prevImage = useCallback((e?: React.MouseEvent) => {
+  const prevImage = useCallback((e?: React.MouseEvent | React.TouchEvent) => {
     e?.stopPropagation();
     if (images.length <= 1) return;
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
@@ -104,6 +109,76 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const handleMouseUp = () => setIsDragging(false);
 
+  // Advanced Touch & Pinch Actions
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      touchStartX.current = e.touches[0].clientX;
+      touchStartY.current = e.touches[0].clientY;
+      if (zoom > 1) {
+        setIsDragging(true);
+        dragStart.current = { x: e.touches[0].clientX - pan.x, y: e.touches[0].clientY - pan.y };
+      }
+    } else if (e.touches.length === 2) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      touchStartDist.current = dist;
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length === 1) {
+      if (zoom > 1 && isDragging) {
+        setPan({
+          x: e.touches[0].clientX - dragStart.current.x,
+          y: e.touches[0].clientY - dragStart.current.y,
+        });
+      }
+    } else if (e.touches.length === 2 && touchStartDist.current) {
+      const dist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const ratio = dist / touchStartDist.current;
+      setZoom((prev) => Math.max(1, Math.min(prev * ratio, 4)));
+      touchStartDist.current = dist;
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setIsDragging(false);
+    touchStartDist.current = null;
+
+    if (zoom === 1 && touchStartX.current !== null && e.changedTouches.length > 0) {
+      const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+      const deltaY = e.changedTouches[0].clientY - (touchStartY.current || 0);
+
+      if (Math.abs(deltaX) > 60 && Math.abs(deltaY) < 100) {
+        if (deltaX < 0) {
+          nextImage(e);
+        } else {
+          prevImage(e);
+        }
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
+  const handleDoubleTap = (e: React.MouseEvent | React.TouchEvent) => {
+    e.stopPropagation();
+    const now = Date.now();
+    if (now - lastTapTime.current < 300) {
+      if (zoom > 1) {
+        handleResetZoom();
+      } else {
+        setZoom(2.5);
+      }
+    }
+    lastTapTime.current = now;
+  };
+
   const currentImage = images[currentIndex];
 
   return (
@@ -128,7 +203,7 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             <div className="flex items-center gap-2">
               <button
                 onClick={(e) => { e.stopPropagation(); handleZoomIn(); }}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all animate-scaleIn"
                 title="Zoom In (+)"
               >
                 <ZoomIn className="w-4 h-4" />
@@ -161,14 +236,14 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           {images.length > 1 && (
             <>
               <button
-                onClick={prevImage}
+                onClick={(e) => prevImage(e)}
                 className="absolute left-4 z-50 w-11 h-11 rounded-full bg-black/60 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all backdrop-blur-md shadow-lg"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
-                onClick={nextImage}
+                onClick={(e) => nextImage(e)}
                 className="absolute right-4 z-50 w-11 h-11 rounded-full bg-black/60 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all backdrop-blur-md shadow-lg"
                 aria-label="Next image"
               >
@@ -177,7 +252,7 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             </>
           )}
 
-          {/* Image Container with Zoom & Pan */}
+          {/* Image Container with Zoom, Swipe & Pan */}
           <div
             className="relative max-w-5xl max-h-[80vh] w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
             onClick={(e) => e.stopPropagation()}
@@ -186,13 +261,17 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onDoubleClick={handleDoubleTap}
           >
             <img
               src={currentImage.src}
               alt={currentImage.alt || 'Lightbox Preview'}
               style={{
                 transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`,
-                transition: isDragging ? 'none' : 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
+                transition: isDragging ? 'none' : 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
               className="max-h-[75vh] max-w-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.9)] select-none pointer-events-auto"
             />
