@@ -19,9 +19,10 @@ export const PRODUCTS_DATA: ProductItem[] = [
     audience: 'Customers',
     benefits: 'Discovery • Offers • Booking where supported • Loyalty and rewards • Reviews',
     status: 'Demo',
-    demoUrl: 'https://remix-final-salon-app.vercel.app/',
+    demoUrl: 'https://final-salon-app.vercel.app/',
     secondaryLinks: [
-      { label: 'Salon Customer App Demo', url: 'https://remix-final-salon-app.vercel.app/' },
+      { label: 'Salon Customer App Demo', url: 'https://final-salon-app.vercel.app/' },
+      { label: 'GlowSlot Source Repository', url: 'https://github.com/lremlaha77922-ai/GlowSlot-.git' },
       { label: 'Beauty Directory Platform', url: 'https://beauty-directory-zeta.vercel.app/' },
     ],
   },
