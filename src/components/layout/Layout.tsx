@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SiteHeader } from './SiteHeader';
 import { SiteFooter } from './SiteFooter';
+import { MobileAppDock } from './MobileAppDock';
 import { SEO_METADATA } from '../../data/seo';
 
 interface LayoutProps {
@@ -68,12 +69,17 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       <SiteHeader />
 
       {/* Main Content Area */}
-      <main className="flex-grow relative z-10 w-full focus:outline-none" id="main-content">
+      <main className="flex-grow relative z-10 w-full focus:outline-none pb-20 md:pb-0" id="main-content">
         {children}
       </main>
 
-      {/* Global Footer */}
-      <SiteFooter />
+      {/* Global Footer (Hidden on mobile per PWA specifications) */}
+      <div className="hidden md:block">
+        <SiteFooter />
+      </div>
+
+      {/* Mobile Bottom App Dock */}
+      <MobileAppDock />
     </div>
   );
 };

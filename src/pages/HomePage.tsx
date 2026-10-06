@@ -11,7 +11,6 @@ import { FadeIn } from '../components/common/MotionWrapper';
 import { EcosystemOverview } from '../components/home/EcosystemOverview';
 import { MultiVerticalsSection } from '../components/home/MultiVerticalsSection';
 import { TrustDifferentiationSection } from '../components/home/TrustDifferentiationSection';
-import { VisionMissionSection } from '../components/home/VisionMissionSection';
 import { HomeCTASection } from '../components/home/HomeCTASection';
 
 export const HomePage: React.FC = () => {
@@ -238,9 +237,6 @@ export const HomePage: React.FC = () => {
 
       {/* 4.5 Trust / Differentiation */}
       <TrustDifferentiationSection />
-
-      {/* 02. Vision & Mission Section (Exact match to approved visual reference) */}
-      <VisionMissionSection />
 
       {/* 06. CTA Section */}
       <HomeCTASection />

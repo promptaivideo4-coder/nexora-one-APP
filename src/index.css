@@ -22,6 +22,17 @@
   --text-muted: rgba(245, 245, 245, 0.65);
 }
 
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,6 +48,8 @@ body {
   background-color: #0A0A0A;
   color: #F5F5F5;
   overflow-x: hidden;
+  margin: 0;
+  touch-action: manipulation;
 }
 
 h1 {
