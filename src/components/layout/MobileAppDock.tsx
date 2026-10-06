@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Compass, Calendar, User, Menu, ArrowUp, X, Sparkles, Shield, BookOpen, Layers, Grid, Award, Building2, FileText, Info } from 'lucide-react';
+import { Compass, Calendar, TrendingUp, Menu, ArrowUp, X, Sparkles, Shield, BookOpen, Layers, Grid, Award, Building2, FileText, Info } from 'lucide-react';
 
 export const MobileAppDock: React.FC = () => {
   const navigate = useNavigate();
@@ -84,13 +84,13 @@ export const MobileAppDock: React.FC = () => {
         </button>
 
         <button
-          onClick={() => navigate('/insights')}
+          onClick={() => navigate('/investors')}
           className={`flex flex-col items-center justify-center w-16 py-1 text-[10px] font-heading font-medium transition-colors ${
-            location.pathname === '/insights' ? 'text-[#F4D03F]' : 'text-white/60 hover:text-white'
+            location.pathname === '/investors' ? 'text-[#F4D03F]' : 'text-white/60 hover:text-white'
           }`}
         >
-          <User className="w-5 h-5 mb-1" />
-          <span>Updates</span>
+          <TrendingUp className="w-5 h-5 mb-1" />
+          <span>Investors</span>
         </button>
 
         <button
