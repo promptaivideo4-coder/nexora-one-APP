@@ -23,9 +23,11 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   
   const dragStart = useRef({ x: 0, y: 0 });
   const touchStartDist = useRef<number | null>(null);
+  const touchStartZoom = useRef<number>(1);
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
   const lastTapTime = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const openLightbox = useCallback((imgs: LightboxImage[], index = 0) => {
     setImages(imgs);
@@ -72,24 +74,40 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [isOpen, closeLightbox, nextImage, prevImage]);
 
   const handleZoomIn = () => setZoom((prev) => Math.min(prev + 0.5, 4));
-  const handleZoomOut = () => setZoom((prev) => Math.max(prev - 0.5, 1));
+  const handleZoomOut = () => setZoom((prev) => {
+    const next = Math.max(prev - 0.5, 1);
+    if (next === 1) setPan({ x: 0, y: 0 });
+    return next;
+  });
+  
   const handleResetZoom = () => {
     setZoom(1);
     setPan({ x: 0, y: 0 });
   };
 
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
-    if (e.deltaY < 0) {
-      setZoom((prev) => Math.min(prev + 0.25, 4));
-    } else {
-      setZoom((prev) => {
-        const next = Math.max(prev - 0.25, 1);
-        if (next === 1) setPan({ x: 0, y: 0 });
-        return next;
-      });
-    }
-  };
+  // Register non-passive wheel event listener on container to prevent main document scroll
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !isOpen) return;
+
+    const handleWheelNative = (e: WheelEvent) => {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        setZoom((prev) => Math.min(prev + 0.25, 4));
+      } else {
+        setZoom((prev) => {
+          const next = Math.max(prev - 0.25, 1);
+          if (next === 1) setPan({ x: 0, y: 0 });
+          return next;
+        });
+      }
+    };
+
+    container.addEventListener('wheel', handleWheelNative, { passive: false });
+    return () => {
+      container.removeEventListener('wheel', handleWheelNative);
+    };
+  }, [isOpen]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (zoom > 1) {
@@ -109,44 +127,77 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const handleMouseUp = () => setIsDragging(false);
 
-  // Advanced Touch & Pinch Actions
+  // Touch handlers for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    const now = Date.now();
+    
     if (e.touches.length === 1) {
-      touchStartX.current = e.touches[0].clientX;
-      touchStartY.current = e.touches[0].clientY;
+      // Double tap detection
+      const timeSinceLastTap = now - lastTapTime.current;
+      if (timeSinceLastTap < 280 && timeSinceLastTap > 0) {
+        if (zoom > 1) {
+          handleResetZoom();
+        } else {
+          setZoom(2.5);
+          setPan({ x: 0, y: 0 });
+        }
+        lastTapTime.current = 0;
+        return;
+      }
+      lastTapTime.current = now;
+
+      // Track drag start
+      const touch = e.touches[0];
+      touchStartX.current = touch.clientX;
+      touchStartY.current = touch.clientY;
+      
       if (zoom > 1) {
         setIsDragging(true);
-        dragStart.current = { x: e.touches[0].clientX - pan.x, y: e.touches[0].clientY - pan.y };
+        dragStart.current = {
+          x: touch.clientX - pan.x,
+          y: touch.clientY - pan.y
+        };
       }
     } else if (e.touches.length === 2) {
-      const dist = Math.hypot(
-        e.touches[0].clientX - e.touches[1].clientX,
-        e.touches[0].clientY - e.touches[1].clientY
-      );
+      // Pinch zoom start
+      setIsDragging(false);
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
       touchStartDist.current = dist;
+      touchStartZoom.current = zoom;
     }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
+    e.stopPropagation();
+    
     if (e.touches.length === 1) {
       if (zoom > 1 && isDragging) {
+        const touch = e.touches[0];
         setPan({
-          x: e.touches[0].clientX - dragStart.current.x,
-          y: e.touches[0].clientY - dragStart.current.y,
+          x: touch.clientX - dragStart.current.x,
+          y: touch.clientY - dragStart.current.y,
         });
       }
-    } else if (e.touches.length === 2 && touchStartDist.current) {
-      const dist = Math.hypot(
-        e.touches[0].clientX - e.touches[1].clientX,
-        e.touches[0].clientY - e.touches[1].clientY
-      );
+    } else if (e.touches.length === 2 && touchStartDist.current !== null) {
+      const t1 = e.touches[0];
+      const t2 = e.touches[1];
+      const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+      
       const ratio = dist / touchStartDist.current;
-      setZoom((prev) => Math.max(1, Math.min(prev * ratio, 4)));
-      touchStartDist.current = dist;
+      const targetZoom = Math.max(1, Math.min(touchStartZoom.current * ratio, 4));
+      setZoom(targetZoom);
+      
+      if (targetZoom === 1) {
+        setPan({ x: 0, y: 0 });
+      }
     }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
+    e.stopPropagation();
     setIsDragging(false);
     touchStartDist.current = null;
 
@@ -154,7 +205,8 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       const deltaX = e.changedTouches[0].clientX - touchStartX.current;
       const deltaY = e.changedTouches[0].clientY - (touchStartY.current || 0);
 
-      if (Math.abs(deltaX) > 60 && Math.abs(deltaY) < 100) {
+      // Swipe transition
+      if (Math.abs(deltaX) > 40 && Math.abs(deltaY) < 80) {
         if (deltaX < 0) {
           nextImage(e);
         } else {
@@ -164,19 +216,6 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
     touchStartX.current = null;
     touchStartY.current = null;
-  };
-
-  const handleDoubleTap = (e: React.MouseEvent | React.TouchEvent) => {
-    e.stopPropagation();
-    const now = Date.now();
-    if (now - lastTapTime.current < 300) {
-      if (zoom > 1) {
-        handleResetZoom();
-      } else {
-        setZoom(2.5);
-      }
-    }
-    lastTapTime.current = now;
   };
 
   const currentImage = images[currentIndex];
@@ -189,42 +228,45 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           role="dialog"
           aria-modal="true"
           aria-label="Image Lightbox Viewer"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-2xl animate-fadeIn p-4 sm:p-6 select-none"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black/95 backdrop-blur-2xl animate-fadeIn p-4 select-none pointer-events-auto"
           onClick={closeLightbox}
         >
           {/* Top Control Bar */}
-          <div className="absolute top-4 left-4 right-4 z-50 flex items-center justify-between pointer-events-auto">
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white text-xs font-heading">
+          <div 
+            className="absolute top-4 left-4 right-4 z-[10000] flex items-center justify-between pointer-events-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white text-xs font-heading font-medium">
               <span>{currentIndex + 1}</span>
               <span className="text-white/40">/</span>
               <span>{images.length}</span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <button
                 onClick={(e) => { e.stopPropagation(); handleZoomIn(); }}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all animate-scaleIn"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white flex items-center justify-center transition-all cursor-pointer"
                 title="Zoom In (+)"
               >
-                <ZoomIn className="w-4 h-4" />
+                <ZoomIn className="w-5 h-5" />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); handleZoomOut(); }}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white flex items-center justify-center transition-all cursor-pointer"
                 title="Zoom Out (-)"
               >
-                <ZoomOut className="w-4 h-4" />
+                <ZoomOut className="w-5 h-5" />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); handleResetZoom(); }}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 text-white flex items-center justify-center transition-all cursor-pointer"
                 title="Reset Zoom"
               >
-                <RotateCcw className="w-4 h-4" />
+                <RotateCcw className="w-5 h-5" />
               </button>
               <button
-                onClick={closeLightbox}
-                className="w-9 h-9 rounded-full bg-[#DAAF37] text-[#0A0A0A] font-bold flex items-center justify-center shadow-[0_0_20px_rgba(218,175,55,0.4)] hover:scale-105 transition-transform"
+                onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+                className="w-10 h-10 rounded-full bg-[#DAAF37] hover:bg-[#F4D03F] text-[#0A0A0A] flex items-center justify-center shadow-[0_0_20px_rgba(218,175,55,0.4)] active:scale-95 transition-all cursor-pointer"
                 title="Close (Esc)"
               >
                 <X className="w-5 h-5" />
@@ -232,19 +274,19 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             </div>
           </div>
 
-          {/* Navigation Chevrons for Multi-image gallery */}
+          {/* Navigation Chevrons for Multi-image gallery on desktop */}
           {images.length > 1 && (
             <>
               <button
                 onClick={(e) => prevImage(e)}
-                className="absolute left-4 z-50 w-11 h-11 rounded-full bg-black/60 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all backdrop-blur-md shadow-lg"
+                className="absolute left-6 z-[10000] w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] text-white hidden md:flex items-center justify-center transition-all backdrop-blur-md shadow-2xl cursor-pointer"
                 aria-label="Previous image"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={(e) => nextImage(e)}
-                className="absolute right-4 z-50 w-11 h-11 rounded-full bg-black/60 hover:bg-[#DAAF37] hover:text-[#0A0A0A] border border-white/20 text-white flex items-center justify-center transition-all backdrop-blur-md shadow-lg"
+                className="absolute right-6 z-[10000] w-12 h-12 rounded-full bg-black/60 border border-white/10 hover:bg-[#DAAF37] hover:text-[#0A0A0A] text-white hidden md:flex items-center justify-center transition-all backdrop-blur-md shadow-2xl cursor-pointer"
                 aria-label="Next image"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -254,9 +296,9 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
           {/* Image Container with Zoom, Swipe & Pan */}
           <div
-            className="relative max-w-5xl max-h-[80vh] w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing"
+            ref={containerRef}
+            className="relative max-w-5xl max-h-[80vh] w-full h-full flex items-center justify-center overflow-hidden cursor-grab active:cursor-grabbing pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
-            onWheel={handleWheel}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -264,22 +306,23 @@ export const LightboxProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-            onDoubleClick={handleDoubleTap}
           >
             <img
               src={currentImage.src}
               alt={currentImage.alt || 'Lightbox Preview'}
+              draggable={false}
+              onDragStart={(e) => e.preventDefault()}
               style={{
                 transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`,
                 transition: isDragging ? 'none' : 'transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
-              className="max-h-[75vh] max-w-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.9)] select-none pointer-events-auto"
+              className="max-h-[70vh] max-w-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.9)] select-none pointer-events-auto"
             />
           </div>
 
           {/* Caption / Alt Footer */}
           {currentImage.alt && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 max-w-lg px-4 py-2 rounded-xl bg-black/70 backdrop-blur-md border border-white/10 text-white/90 text-xs font-sans text-center pointer-events-none shadow-lg">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 max-w-lg px-4 py-2 rounded-xl bg-black/70 backdrop-blur-md border border-white/10 text-white/90 text-xs font-sans text-center pointer-events-none shadow-lg z-[10000]">
               {currentImage.alt}
             </div>
           )}

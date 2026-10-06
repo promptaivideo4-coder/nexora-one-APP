@@ -21,6 +21,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 
 export const AboutPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -109,7 +110,7 @@ export const AboutPage: React.FC = () => {
           <div className="relative rounded-2xl sm:rounded-3xl border border-[#DAAF37]/40 bg-gradient-to-b from-white/[0.06] via-black/80 to-black/90 backdrop-blur-2xl p-3 sm:p-6 lg:p-8 shadow-[0_16px_50px_rgba(0,0,0,0.85),0_0_45px_rgba(218,175,55,0.12),inset_0_1px_1px_rgba(255,255,255,0.15)] overflow-hidden">
             {/* Centered Image with 16:9 Aspect Ratio & Subtle Gold Border */}
             <div className="relative z-10 rounded-xl sm:rounded-2xl overflow-hidden border border-[#DAAF37]/35 shadow-[0_10px_35px_rgba(0,0,0,0.75)] bg-black/60 group">
-              <img
+              <InteractiveImage
                 src="/assets/about-building.webp"
                 alt="Nexora Global Corporate Vision, Governance, and Ecosystem Leadership"
                 width={1920}

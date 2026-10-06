@@ -120,15 +120,15 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* Mobile-only visual integration (seamless without card/border/box) */}
-              <div className="lg:hidden relative w-full mt-6 pointer-events-none">
+              <div className="lg:hidden relative w-full mt-6 pointer-events-auto">
                 <div className="relative w-full aspect-[16/9] overflow-hidden">
-                  <img
+                  <InteractiveImage
                     src="/assets/hero-devices.webp"
                     alt="Nexora One connected digital ecosystem"
                     className="w-full h-full object-cover object-center"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/60 via-transparent to-[#0A0A0A]/40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/60 via-transparent to-[#0A0A0A]/40 pointer-events-none" />
                 </div>
               </div>
             </FadeIn>

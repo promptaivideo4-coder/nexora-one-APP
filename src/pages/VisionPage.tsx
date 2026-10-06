@@ -18,6 +18,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import {
   VISION_STATEMENT,
   MISSION_STATEMENT,
@@ -58,7 +59,7 @@ export const VisionPage: React.FC = () => {
         {/* Cinematic Glowing Gold Earth Background on Right */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
           <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[65%] xl:w-[60%] h-full origin-top-right">
-            <img
+            <InteractiveImage
               src="/assets/vision-mission-hero.webp"
               alt="Nexora Connected Earth Network"
               className="w-full h-full object-cover object-right opacity-90 lg:opacity-100 select-none"

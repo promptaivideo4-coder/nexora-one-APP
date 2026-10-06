@@ -32,7 +32,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     audience: 'Salon owners, professionals',
     benefits: 'Booking • CRM • Loyalty • WhatsApp automation • Recall • Analytics',
     status: 'Demo',
-    demoUrl: 'https://shop-onwer-pink-nexora-aap.vercel.app/',
+    demoUrl: 'https://fanal-templetes-app.vercel.app/templates',
   },
   {
     id: 'white-label',
@@ -41,7 +41,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     audience: 'Salon owners, business owners',
     benefits: 'Your own brand • Online presence • Booking • Designed for fast setup • Connected to SalonOS',
     status: 'Demo',
-    demoUrl: 'https://fanal-templetes-app.vercel.app/templates',
+    demoUrl: 'https://prompt-b-g.vercel.app/',
     secondaryLinks: [
       { label: 'More template examples', url: 'https://final-new-app-templete.vercel.app/' },
     ],
@@ -83,8 +83,8 @@ export const PRODUCTS_DATA: ProductItem[] = [
     oneLiner: 'Buy, sell and rent property through a Nexora One vertical.',
     audience: 'Buyers, sellers, tenants, owners',
     benefits: 'Listings • Leads • Property services',
-    status: 'Planned',
-    demoUrl: null,
+    status: 'Demo',
+    demoUrl: 'https://no-broker-delta.vercel.app/',
   },
   {
     id: 'food-platform',
@@ -110,7 +110,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     oneLiner: 'Intelligent business automation for marketing, retention and decisions.',
     audience: 'Businesses, professionals, partners, brands',
     benefits: 'AI-assisted marketing content • Automated recall • Booking-demand insights',
-    status: 'Planned',
-    demoUrl: null,
+    status: 'Demo',
+    demoUrl: 'https://business-web-solutions-kohl.vercel.app/',
   },
 ];

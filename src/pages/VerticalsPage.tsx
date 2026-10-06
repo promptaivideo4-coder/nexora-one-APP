@@ -19,6 +19,7 @@ import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { StatusBadge } from '../components/common/StatusBadge';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import { VERTICALS_DATA } from '../data/verticals';
 
 export const VerticalsPage: React.FC = () => {
@@ -72,7 +73,7 @@ export const VerticalsPage: React.FC = () => {
 
           {/* Standalone Large Multi-Industry Ecosystem Visual (Directly Below Description, No Outline/Border/Card/Frame) */}
           <div className="w-full max-w-[1440px] mx-auto overflow-hidden rounded-xl sm:rounded-2xl">
-            <img
+            <InteractiveImage
               src="/assets/verticals-ecosystem-hero.webp"
               alt="NEXORA ONE Connected Multi-Industry Ecosystem Dais and Holographic Network"
               width={1920}
@@ -155,7 +156,7 @@ export const VerticalsPage: React.FC = () => {
 
               <div className="lg:col-span-5 bg-white/[0.03] rounded-2xl p-6 border border-white/[0.08] flex flex-col justify-between">
                 <div className="mb-5 overflow-hidden rounded-xl border border-[#DAAF37]/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] aspect-[4/3] sm:aspect-[16/10] relative group">
-                  <img
+                  <InteractiveImage
                     src="/assets/vert-beauty.webp"
                     alt="Luxury modern beauty salon interior"
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"

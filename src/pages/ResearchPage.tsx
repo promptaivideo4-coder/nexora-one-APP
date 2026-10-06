@@ -33,6 +33,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import {
   RESEARCH_OBJECTIVE,
   KNOWN_FINDING,
@@ -121,7 +122,7 @@ export const ResearchPage: React.FC = () => {
 
           {/* Hero Visual Banner */}
           <div className="w-full max-w-[1440px] mx-auto overflow-hidden rounded-xl sm:rounded-2xl border border-[#DAAF37]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] mb-12">
-            <img
+            <InteractiveImage
               src="/assets/market-research-hero.webp"
               alt="NEXORA ONE Market Research and Differentiation Intelligence Dashboard"
               width={1920}

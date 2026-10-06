@@ -16,6 +16,7 @@ import { GlassCard } from '../components/common/GlassCard';
 import { SectionHeading } from '../components/common/SectionHeading';
 import { SectionDivider } from '../components/common/SectionDivider';
 import { FadeIn } from '../components/common/MotionWrapper';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 import { INSIGHT_CATEGORIES, INSIGHTS_DATA } from '../data/insights';
 
 export const InsightsPage: React.FC = () => {
@@ -57,7 +58,7 @@ export const InsightsPage: React.FC = () => {
 
           {/* Standalone Large Insights & Research Visual (Directly Below Subtitle, No Frame/Card/Border) */}
           <div className="w-full max-w-[1440px] mx-auto overflow-hidden rounded-xl sm:rounded-2xl">
-            <img
+            <InteractiveImage
               src="/assets/insights-research-hero.webp"
               alt="NEXORA ONE Beauty Industry Insights, Trends and Analytics Dashboard"
               width={1920}

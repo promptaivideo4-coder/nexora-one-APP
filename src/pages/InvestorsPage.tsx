@@ -47,6 +47,7 @@ import {
   Megaphone,
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
+import { InteractiveImage } from '../components/common/InteractiveImage';
 
 interface EcosystemNode {
   id: string;
@@ -237,7 +238,7 @@ export const InvestorsPage: React.FC = () => {
             <div className="relative w-full max-w-[680px] p-2 sm:p-4 rounded-3xl bg-gradient-to-b from-white/[0.04] via-black/80 to-[#0A0A0A] border border-[#DAAF37]/30 shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(218,175,55,0.15)] overflow-hidden">
               {/* Cinematic Center Visual Plate (Depth Layer) */}
               <div className="absolute inset-0 z-0 opacity-25 mix-blend-screen pointer-events-none">
-                <img
+                <InteractiveImage
                   src="/assets/investor-ecosystem-core.webp"
                   alt="Nexora Connected Digital Core"
                   width={680}
@@ -437,7 +438,7 @@ export const InvestorsPage: React.FC = () => {
 
                         {/* Node Photorealistic Sector Imagery */}
                         <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden border border-[#DAAF37]/40 flex-shrink-0 bg-black shadow-inner">
-                          <img
+                          <InteractiveImage
                             src={node.image}
                             alt={`${node.name} representation`}
                             width={56}
@@ -518,7 +519,7 @@ export const InvestorsPage: React.FC = () => {
 
         {/* CINEMATIC CUSTOMER PROBLEMS VISUAL (Visual representation of the 5 customer pain points) */}
         <div className="mb-12 sm:mb-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.8),0_0_30px_rgba(218,175,55,0.12)]">
-          <img
+          <InteractiveImage
             src="/assets/customer-problems-cinematic.webp"
             alt="Beauty Booking Journey: Five Customer Problems - Finding Service, Booking Uncertainty, Waiting and Overcrowding, Scattered Offers, Weak Repeat Engagement"
             width={1920}
