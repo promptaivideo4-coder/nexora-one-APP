@@ -15,7 +15,7 @@ export interface VerticalCardProps {
   className?: string;
 }
 
-export const VerticalCard: React.FC<VerticalCardProps> = ({
+export const VerticalCard: React.FC<VerticalCardProps> = React.memo(({
   id,
   name,
   subtitle,
@@ -38,6 +38,7 @@ export const VerticalCard: React.FC<VerticalCardProps> = ({
           alt={name}
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A1A] via-[#121212] to-[#080808]">
@@ -100,4 +101,6 @@ export const VerticalCard: React.FC<VerticalCardProps> = ({
   }
 
   return <div onClick={onClick}>{content}</div>;
-};
+});
+
+VerticalCard.displayName = 'VerticalCard';

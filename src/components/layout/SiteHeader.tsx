@@ -1,16 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { motion, useReducedMotion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { NAV_ITEMS, HEADER_CTA } from '../../data/navigation';
 import { NexoraLogo } from '../common/NexoraLogo';
 import { Button } from '../common/Button';
+import { LanguageSelector } from './LanguageSelector';
+import { prefetchRoute } from '../../utils/prefetchRoutes';
 
-export const SiteHeader: React.FC = () => {
+const PRIMARY_NAV_ITEMS = NAV_ITEMS.slice(0, 6); // Home, Ecosystem, Products, Beauty, Benefits, Verticals
+const MORE_NAV_ITEMS = NAV_ITEMS.slice(6); // Vision, Investors, Research, Investor Guide, About
+
+export const SiteHeader: React.FC = React.memo(() => {
+  const { t } = useTranslation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const moreRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const shouldReduceMotion = useReducedMotion();
+
+  const isMoreActive = MORE_NAV_ITEMS.some((item) => location.pathname === item.route);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // Scroll Progress Tracking
   const { scrollYProgress } = useScroll();
@@ -21,16 +43,26 @@ export const SiteHeader: React.FC = () => {
   });
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 20;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
+  // Close mobile drawer and dropdown on route change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMoreOpen(false);
   }, [location.pathname]);
 
   // Lock body scroll when mobile menu is open
@@ -72,23 +104,25 @@ export const SiteHeader: React.FC = () => {
           : 'bg-[#0A0A0A]/75 backdrop-blur-md border-b border-white/[0.08] py-3.5'
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 xl:gap-4">
         {/* Left: Brand Logo & Wordmark (never wraps or clips) */}
-        <div className="flex-shrink-0">
-          <NexoraLogo size="md" showSubtitle={true} />
+        <div className="logo-container flex-shrink-0">
+          <NexoraLogo size="md" showSubtitle={false} />
         </div>
 
-        {/* Center: 10 Nav Items (Desktop ≥ 1024px) */}
+        {/* Center: Desktop Navigation */}
         <nav
-          className="hidden xl:flex items-center gap-1 2xl:gap-2 flex-nowrap"
+          className="hidden lg:flex items-center gap-0.5 xl:gap-1.5 2xl:gap-2 flex-nowrap"
           aria-label="Main Navigation"
         >
-          {NAV_ITEMS.map((item) => (
+          {PRIMARY_NAV_ITEMS.map((item) => (
             <NavLink
               key={item.id}
               to={item.route}
+              onMouseEnter={() => prefetchRoute(item.route)}
+              onTouchStart={() => prefetchRoute(item.route)}
               className={({ isActive }) =>
-                `relative px-2.5 py-1.5 text-[13px] font-heading font-medium tracking-wide rounded-md transition-colors whitespace-nowrap ${
+                `relative px-2 xl:px-2.5 py-1.5 text-[12px] xl:text-[13px] font-heading font-medium tracking-wide rounded-md transition-colors whitespace-nowrap ${
                   isActive
                     ? 'text-[#F4D03F]'
                     : 'text-white/70 hover:text-white hover:bg-white/[0.05]'
@@ -97,55 +131,95 @@ export const SiteHeader: React.FC = () => {
             >
               {({ isActive }) => (
                 <>
-                  <span>{item.shortLabel}</span>
+                  <span>{t(item.shortLabel)}</span>
                   {isActive && (
-                    <span className="absolute bottom-0 left-2.5 right-2.5 h-[2px] bg-gradient-to-r from-[#F4D03F] to-[#DAAF37] shadow-[0_0_8px_rgba(244,208,63,0.8)] rounded-full" />
+                    <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#F4D03F] to-[#DAAF37] shadow-[0_0_8px_rgba(244,208,63,0.8)] rounded-full" />
                   )}
                 </>
               )}
             </NavLink>
           ))}
-        </nav>
 
-        {/* Medium Desktop (1024px - 1279px) - slightly tighter spacing */}
-        <nav
-          className="hidden lg:flex xl:hidden items-center gap-0.5 flex-nowrap"
-          aria-label="Main Navigation Tablet"
-        >
-          {NAV_ITEMS.map((item) => (
-            <NavLink
-              key={item.id}
-              to={item.route}
-              className={({ isActive }) =>
-                `relative px-2 py-1 text-[12px] font-heading font-medium tracking-tight rounded transition-colors whitespace-nowrap ${
-                  isActive
-                    ? 'text-[#F4D03F]'
-                    : 'text-white/70 hover:text-white hover:bg-white/[0.05]'
-                }`
-              }
+          {/* Secondary items consolidated into a clean "More ▾" dropdown to prevent overflow on zoom or widescreen */}
+          <div
+            ref={moreRef}
+            className="relative"
+            onMouseEnter={() => setMoreOpen(true)}
+            onMouseLeave={() => setMoreOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setMoreOpen((prev) => !prev)}
+              className={`relative flex items-center gap-1 px-2 xl:px-2.5 py-1.5 text-[12px] xl:text-[13px] font-heading font-medium tracking-wide rounded-md transition-colors whitespace-nowrap ${
+                isMoreActive || moreOpen
+                  ? 'text-[#F4D03F]'
+                  : 'text-white/70 hover:text-white hover:bg-white/[0.05]'
+              }`}
+              aria-expanded={moreOpen}
+              aria-haspopup="true"
             >
-              {({ isActive }) => (
-                <>
-                  <span>{item.shortLabel}</span>
-                  {isActive && (
-                    <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-[#F4D03F] rounded-full" />
-                  )}
-                </>
+              <span>{t('nav.more', 'More')}</span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  moreOpen ? 'rotate-180 text-[#F4D03F]' : 'text-white/50'
+                }`}
+              />
+              {isMoreActive && (
+                <span className="absolute bottom-0 left-2 right-2 h-[2px] bg-gradient-to-r from-[#F4D03F] to-[#DAAF37] shadow-[0_0_8px_rgba(244,208,63,0.8)] rounded-full" />
               )}
-            </NavLink>
-          ))}
+            </button>
+
+            {/* Dropdown Menu */}
+            <AnimatePresence>
+              {moreOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 6, scale: 0.96 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 4, scale: 0.96 }}
+                  transition={{ duration: 0.15, ease: 'easeOut' }}
+                  className="absolute top-full right-0 mt-1.5 w-56 p-1.5 rounded-xl bg-[#0F0F0F]/95 backdrop-blur-2xl border border-[#DAAF37]/30 shadow-[0_15px_35px_rgba(0,0,0,0.85),0_0_20px_rgba(218,175,55,0.15)] z-[110]"
+                >
+                  <div className="flex flex-col gap-0.5">
+                    {MORE_NAV_ITEMS.map((item) => {
+                      const isActive = location.pathname === item.route;
+                      return (
+                        <NavLink
+                          key={item.id}
+                          to={item.route}
+                          onMouseEnter={() => prefetchRoute(item.route)}
+                          onTouchStart={() => prefetchRoute(item.route)}
+                          onClick={() => setMoreOpen(false)}
+                          className={`flex items-center justify-between px-3 py-2 rounded-lg text-xs font-heading font-medium transition-all ${
+                            isActive
+                              ? 'bg-[#DAAF37]/15 text-[#F4D03F] border border-[#DAAF37]/40 font-bold'
+                              : 'text-white/80 hover:text-white hover:bg-white/[0.06]'
+                          }`}
+                        >
+                          <span>{t(item.fullLabel)}</span>
+                          {isActive && (
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#F4D03F] shadow-[0_0_6px_rgba(244,208,63,0.8)]" />
+                          )}
+                        </NavLink>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
-        {/* Right: Primary Header CTA (only one approved CTA: Explore the Ecosystem) */}
-        <div className="hidden lg:flex items-center flex-shrink-0">
+        {/* Right: Language Selector & Primary Header CTA */}
+        <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 flex-shrink-0">
+          <LanguageSelector />
           <Button
             to={HEADER_CTA.target}
             variant="primary"
             size="sm"
             icon={<ArrowRight className="w-3.5 h-3.5" />}
-            className="whitespace-nowrap shadow-[0_2px_15px_rgba(218,175,55,0.3)]"
+            className="whitespace-nowrap shadow-[0_2px_15px_rgba(218,175,55,0.3)] text-xs xl:text-sm px-3 xl:px-4 py-1.5"
           >
-            {HEADER_CTA.label}
+            {t(HEADER_CTA.label)}
           </Button>
         </div>
 
@@ -156,8 +230,9 @@ export const SiteHeader: React.FC = () => {
             variant="primary"
             size="sm"
             className="text-[10px] sm:text-xs px-2.5 py-1 sm:px-3 sm:py-1.5 whitespace-nowrap"
+            onClick={() => setMobileMenuOpen(false)}
           >
-            Ecosystem
+            {t(HEADER_CTA.label)}
           </Button>
           <button
             type="button"
@@ -182,6 +257,8 @@ export const SiteHeader: React.FC = () => {
               <NavLink
                 key={item.id}
                 to={item.route}
+                onMouseEnter={() => prefetchRoute(item.route)}
+                onTouchStart={() => prefetchRoute(item.route)}
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
                   `flex items-center justify-between px-4 py-3 rounded-xl border text-sm font-heading font-medium transition-all ${
@@ -191,7 +268,7 @@ export const SiteHeader: React.FC = () => {
                   }`
                 }
               >
-                <span>{item.fullLabel}</span>
+                <span>{t(item.fullLabel)}</span>
                 <span className="text-xs font-sans text-white/40">{String(idx + 1).padStart(2, '0')}</span>
               </NavLink>
             ))}
@@ -205,10 +282,10 @@ export const SiteHeader: React.FC = () => {
               className="w-full text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {HEADER_CTA.label}
+              {t(HEADER_CTA.label)}
             </Button>
-            <p className="text-center text-xs text-white/40 font-sans">
-              NEXORA ONE — Connected Digital Ecosystem
+            <p className="text-center text-xs text-white/40 font-sans tracking-wide">
+              NEXORA ONE
             </p>
           </div>
         </div>
@@ -216,4 +293,6 @@ export const SiteHeader: React.FC = () => {
     </motion.header>
     </>
   );
-};
+});
+
+SiteHeader.displayName = 'SiteHeader';

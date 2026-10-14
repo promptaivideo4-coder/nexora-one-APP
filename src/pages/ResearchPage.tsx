@@ -96,22 +96,22 @@ export const ResearchPage: React.FC = () => {
   return (
     <div className="w-full bg-[#0A0A0A] text-white">
       {/* 1. Hero Section */}
-      <section className="pt-12 pb-12 sm:pt-20 sm:pb-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-10 pb-8 sm:pt-14 sm:pb-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
-          <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm shadow-[0_0_20px_rgba(218,175,55,0.15)]">
+          <div className="text-center max-w-4xl mx-auto mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold tracking-wide uppercase mb-4 backdrop-blur-sm shadow-[0_0_20px_rgba(218,175,55,0.15)]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F4D03F] animate-pulse" />
               EVIDENCE & MARKET INTELLIGENCE
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#F5F5F5] tracking-tight mx-auto leading-[1.15] mb-6">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#F5F5F5] tracking-tight mx-auto leading-[1.15] mb-4">
               Market Research &{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] via-[#F4D03F] to-[#DAAF37]">
                 Differentiation
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-white/80 font-sans leading-relaxed max-w-3xl mx-auto mb-4">
+            <p className="text-base sm:text-lg lg:text-xl text-white/80 font-sans leading-relaxed max-w-3xl mx-auto mb-3">
               Understanding the existing landscape before defining the Nexora architecture.
             </p>
 
@@ -121,7 +121,7 @@ export const ResearchPage: React.FC = () => {
           </div>
 
           {/* Hero Visual Banner */}
-          <div className="w-full max-w-[1440px] mx-auto overflow-hidden rounded-xl sm:rounded-2xl border border-[#DAAF37]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] mb-12">
+          <div className="w-full max-w-[1440px] mx-auto overflow-hidden rounded-xl sm:rounded-2xl border border-[#DAAF37]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] mb-8">
             <InteractiveImage
               src="/assets/market-research-hero.webp"
               alt="NEXORA ONE Market Research and Differentiation Intelligence Dashboard"
@@ -135,11 +135,11 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 2. Research Objective & Known Findings Cards */}
-      <section className="pb-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+      <section className="pb-10 sm:pb-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Objective */}
-          <GlassCard className="p-8 sm:p-10 border-[#DAAF37]/30" glow="subtle">
-            <div className="flex items-center gap-3.5 mb-5">
+          <GlassCard className="p-6 sm:p-8 border-[#DAAF37]/30" glow="subtle">
+            <div className="flex items-center gap-3.5 mb-4">
               <div className="w-12 h-12 rounded-xl bg-[#DAAF37]/15 border border-[#DAAF37]/35 flex items-center justify-center text-[#F4D03F]">
                 <Search className="w-6 h-6" />
               </div>
@@ -158,8 +158,8 @@ export const ResearchPage: React.FC = () => {
           </GlassCard>
 
           {/* Known Finding */}
-          <GlassCard className="p-8 sm:p-10 border-[#DAAF37]/30" glow="subtle">
-            <div className="flex items-center gap-3.5 mb-5">
+          <GlassCard className="p-6 sm:p-8 border-[#DAAF37]/30" glow="subtle">
+            <div className="flex items-center gap-3.5 mb-4">
               <div className="w-12 h-12 rounded-xl bg-[#DAAF37]/15 border border-[#DAAF37]/35 flex items-center justify-center text-[#F4D03F]">
                 <Scale className="w-6 h-6" />
               </div>
@@ -179,8 +179,8 @@ export const ResearchPage: React.FC = () => {
         </div>
 
         {/* Methodology Card */}
-        <GlassCard className="p-8 sm:p-10 border-white/15 mb-16">
-          <div className="flex items-center gap-3 mb-6">
+        <GlassCard className="p-6 sm:p-8 border-white/15 mb-8">
+          <div className="flex items-center gap-3 mb-5">
             <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-white">
               <FileText className="w-4 h-4" />
             </div>
@@ -189,7 +189,7 @@ export const ResearchPage: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             {METHODOLOGY_POINTS.map((point, idx) => (
               <div
                 key={idx}
@@ -213,8 +213,8 @@ export const ResearchPage: React.FC = () => {
       <SectionDivider />
 
       {/* 3. COMPETITOR LANDSCAPE SECTION */}
-      <section className="py-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center mb-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-wider mb-4">
             <Activity className="w-3.5 h-3.5 text-[#F4D03F]" />
             Research Snapshot: {RESEARCH_SNAPSHOT_DATE}
@@ -233,7 +233,7 @@ export const ResearchPage: React.FC = () => {
         </div>
 
         {/* Competitor Table Container */}
-        <GlassCard className="p-4 sm:p-8 overflow-hidden border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.8)] mb-16">
+        <GlassCard className="p-4 sm:p-8 overflow-hidden border-[#DAAF37]/30 shadow-[0_16px_48px_rgba(0,0,0,0.8)] mb-8">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm font-sans border-collapse">
               <thead>
@@ -298,7 +298,7 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 4. WHAT THE EXISTING MARKET ALREADY SOLVES */}
-      <section className="py-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Market Capability Assessment"
           title="What The Existing Market"
@@ -306,7 +306,7 @@ export const ResearchPage: React.FC = () => {
           subtitle="The beauty tech landscape features robust, highly specialized point solutions across distinct operational & discovery categories."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 mb-8 sm:mb-10">
           {SOLVED_CATEGORIES.map((cat, idx) => (
             <GlassCard key={idx} className="p-5 border-white/15 flex flex-col justify-between hover:border-[#DAAF37]/40 transition-all">
               <div>
@@ -344,29 +344,29 @@ export const ResearchPage: React.FC = () => {
       <SectionDivider />
 
       {/* 5. WHERE NEXORA IS DIFFERENT */}
-      <section className="py-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-12">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-wider mb-4">
             <Layers className="w-3.5 h-3.5 text-[#F4D03F]" />
             CONNECTED ARCHITECTURE
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5">
             Where Nexora Is{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
               Different
             </span>
           </h2>
 
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-[#DAAF37]/15 via-[#121212] to-[#DAAF37]/10 border border-[#DAAF37]/40 text-center max-w-3xl mx-auto shadow-[0_8px_32px_rgba(0,0,0,0.6)]">
-            <p className="text-base sm:text-lg text-white font-heading font-semibold leading-relaxed">
-              &ldquo;Nexora One is designed around a broader connected ecosystem architecture rather than a single beauty-booking or salon-management use case.&rdquo;
+          <div className="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[#DAAF37]/15 via-black to-black border border-[#DAAF37]/40 text-center max-w-4xl mx-auto shadow-[0_12px_40px_rgba(0,0,0,0.8)]">
+            <p className="text-lg sm:text-2xl text-white font-heading font-bold leading-relaxed italic">
+              “हम feature invent करने का दावा नहीं कर रहे। हम beauty industry के अलग-अलग participant layers को एक connected architecture और local growth network में जोड़ने की कोशिश कर रहे हैं — और अब हम उस claim को product proof, adoption data और ongoing market evidence से validate करेंगे.”
             </p>
           </div>
         </div>
 
         {/* Nexora 9 Connected Layers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 mb-8 sm:mb-10">
           {NEXORA_LAYERS.map((layer, idx) => (
             <GlassCard key={idx} className="p-6 border-[#DAAF37]/25 hover:border-[#DAAF37]/60 transition-all flex flex-col justify-between">
               <div>
@@ -389,7 +389,7 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 6. NEXORA ECOSYSTEM COMBINATION & NETWORK EFFECT */}
-      <section className="py-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Architectural Synergy"
           title="Nexora Ecosystem"
@@ -397,10 +397,10 @@ export const ResearchPage: React.FC = () => {
           subtitle="Connecting previously isolated participant nodes into one self-reinforcing network."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-10">
           {/* Existing Market Pattern */}
-          <GlassCard className="p-8 border-red-500/25 bg-gradient-to-b from-red-950/10 to-black">
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+          <GlassCard className="p-6 sm:p-8 border-red-500/25 bg-gradient-to-b from-red-950/10 to-black">
+            <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
               <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 font-bold text-sm">
                 ✕
               </div>
@@ -414,7 +414,7 @@ export const ResearchPage: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-sm text-white/80 font-sans leading-relaxed mb-6">
+            <p className="text-sm text-white/80 font-sans leading-relaxed mb-5">
               Different isolated platforms solving separate parts of the beauty journey in silos—requiring merchants and customers to juggle fragmented applications, tools, and databases.
             </p>
 
@@ -427,8 +427,8 @@ export const ResearchPage: React.FC = () => {
           </GlassCard>
 
           {/* Nexora Connected Approach */}
-          <GlassCard className="p-8 border-[#DAAF37]/40 bg-gradient-to-b from-[#DAAF37]/10 to-black" glow="gold">
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+          <GlassCard className="p-6 sm:p-8 border-[#DAAF37]/40 bg-gradient-to-b from-[#DAAF37]/10 to-black" glow="gold">
+            <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/10">
               <div className="w-10 h-10 rounded-xl bg-[#DAAF37]/20 border border-[#DAAF37]/50 flex items-center justify-center text-[#F4D03F] font-bold text-sm">
                 ✓
               </div>
@@ -442,12 +442,12 @@ export const ResearchPage: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-sm text-white/90 font-sans leading-relaxed mb-6">
+            <p className="text-sm text-white/90 font-sans leading-relaxed mb-5">
               One connected architecture linking all beauty industry stakeholders directly:
             </p>
 
             {/* Stakeholder Chain */}
-            <div className="flex flex-wrap items-center justify-center gap-2 p-4 rounded-xl bg-black/60 border border-[#DAAF37]/35 text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
+            <div className="flex flex-wrap items-center justify-center gap-2 p-3.5 sm:p-4 rounded-xl bg-black/60 border border-[#DAAF37]/35 text-xs sm:text-sm font-heading font-semibold text-[#F4D03F]">
               <span>Customer</span>
               <span className="text-[#DAAF37]/60">↔</span>
               <span>Business</span>
@@ -464,13 +464,13 @@ export const ResearchPage: React.FC = () => {
         </div>
 
         {/* Strong Differentiator Chain Banner & Flow */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] mb-16 text-center">
+        <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-white/[0.05] via-[#0D0D0D] to-[#070707] border border-[#DAAF37]/35 shadow-[0_20px_60px_rgba(0,0,0,0.9)] mb-8 sm:mb-10 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#DAAF37]/15 border border-[#DAAF37]/40 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
             Core Brand Differentiator
           </div>
 
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-8">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white mb-6">
             Free Beauty Website + 30+ Templates + Growth Partner-Assisted Onboarding + Connected Beauty Ecosystem
           </h3>
 
@@ -495,7 +495,7 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 7. FEATURE MATRIX TABLE */}
-      <section className="py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Empirical Feature Analysis"
           title="Industry Feature"
@@ -504,7 +504,7 @@ export const ResearchPage: React.FC = () => {
         />
 
         {/* Feature Table Container */}
-        <GlassCard className="p-2 sm:p-6 overflow-hidden border-white/15 mb-16">
+        <GlassCard className="p-2 sm:p-6 overflow-hidden border-white/15 mb-8 sm:mb-10">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm font-sans border-collapse">
               <thead>
@@ -543,7 +543,7 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 8. ARCHITECTURAL COMPARISON MATRIX */}
-      <section className="py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Structural Differentiation"
           title="Architectural"
@@ -551,7 +551,7 @@ export const ResearchPage: React.FC = () => {
           subtitle="Nexora's differentiation is founded upon the combination of layers and system-level connectivity rather than an isolated feature."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8 sm:mb-10">
           {ARCHITECTURE_MATRIX.map((dim, idx) => (
             <GlassCard key={idx} className="p-6 flex flex-col justify-between">
               <div>
@@ -562,7 +562,7 @@ export const ResearchPage: React.FC = () => {
                   {dim.dimension}
                 </h3>
 
-                <div className="space-y-4 text-xs sm:text-sm font-sans">
+                <div className="space-y-3.5 text-xs sm:text-sm font-sans">
                   <div className="p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                     <span className="text-[10px] uppercase font-heading font-semibold text-white/40 block mb-1">
                       Conventional Pattern
@@ -588,8 +588,8 @@ export const ResearchPage: React.FC = () => {
       </section>
 
       {/* 9. CLAIM CONTROL & GOVERNANCE POLICY */}
-      <section className="py-12 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-8">
+      <section className="py-10 sm:py-12 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="text-xs uppercase font-heading font-semibold tracking-wider text-[#DAAF37] block mb-1">
             Governance & Compliance Policy
           </span>
@@ -601,7 +601,7 @@ export const ResearchPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8 sm:mb-10">
           {/* Allowed */}
           <GlassCard className="p-6 border-emerald-500/30">
             <div className="flex items-center gap-2 mb-4 text-emerald-400 font-heading font-semibold text-sm">

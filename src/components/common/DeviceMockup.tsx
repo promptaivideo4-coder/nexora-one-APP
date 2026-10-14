@@ -10,7 +10,7 @@ export interface DeviceMockupProps {
   className?: string;
 }
 
-export const DeviceMockup: React.FC<DeviceMockupProps> = ({
+export const DeviceMockup: React.FC<DeviceMockupProps> = React.memo(({
   variant = 'laptop',
   title = 'Nexora Platform',
   subtitle = 'Connected Ecosystem Architecture',
@@ -43,6 +43,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({
               alt={title}
               className="w-full h-full object-cover object-top rounded-lg"
               loading="lazy"
+              decoding="async"
             />
           ) : (
             <>
@@ -112,6 +113,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({
             alt={title}
             className="w-full h-full object-cover object-top rounded-md"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <>
@@ -155,6 +157,7 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({
             alt={title}
             className="w-full h-full object-cover object-top rounded-md"
             loading="lazy"
+            decoding="async"
           />
         ) : (
           <>
@@ -225,4 +228,6 @@ export const DeviceMockup: React.FC<DeviceMockupProps> = ({
   }
 
   return <div className={className}><LaptopFrame /></div>;
-};
+});
+
+DeviceMockup.displayName = 'DeviceMockup';

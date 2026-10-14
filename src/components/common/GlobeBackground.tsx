@@ -9,7 +9,7 @@ export interface GlobeBackgroundProps {
   paused?: boolean;
 }
 
-export const GlobeBackground: React.FC<GlobeBackgroundProps> = ({
+export const GlobeBackground: React.FC<GlobeBackgroundProps> = React.memo(({
   className = '',
   size = 520,
   glow = true,
@@ -228,4 +228,6 @@ export const GlobeBackground: React.FC<GlobeBackgroundProps> = ({
       </svg>
     </div>
   );
-};
+});
+
+GlobeBackground.displayName = 'GlobeBackground';

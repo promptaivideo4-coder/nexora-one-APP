@@ -5,7 +5,7 @@ export interface PageMeta {
 
 export const SEO_METADATA: Record<string, PageMeta> = {
   '/': {
-    title: 'Nexora One — A Connected Digital Ecosystem',
+    title: 'Nexora One',
     description: 'Nexora One connects customers, businesses, professionals, growth partners, brands and distributors through a growing digital ecosystem.',
   },
   '/vision-mission': {

@@ -19,11 +19,12 @@ export const PRODUCTS_DATA: ProductItem[] = [
     audience: 'Customers',
     benefits: 'Discovery • Offers • Booking where supported • Loyalty and rewards • Reviews',
     status: 'Demo',
-    demoUrl: 'https://final-salon-app.vercel.app/',
+    demoUrl: 'https://glow-slot-virid.vercel.app/',
     secondaryLinks: [
+      { label: 'GlowSlot Live App', url: 'https://glow-slot-virid.vercel.app/' },
       { label: 'Salon Customer App Demo', url: 'https://final-salon-app.vercel.app/' },
-      { label: 'GlowSlot Source Repository', url: 'https://github.com/lremlaha77922-ai/GlowSlot-.git' },
       { label: 'Beauty Directory Platform', url: 'https://beauty-directory-zeta.vercel.app/' },
+      { label: 'GlowSlot Source Repository', url: 'https://github.com/lremlaha77922-ai/GlowSlot-.git' },
     ],
   },
   {
@@ -50,13 +51,13 @@ export const PRODUCTS_DATA: ProductItem[] = [
   {
     id: 'growth-partner',
     name: 'Nexora Growth Partner',
-    oneLiner: 'A structured program for people who want to help local businesses go digital.',
+    oneLiner: 'Nexora’s local expansion engine for onboarding and activating salon businesses.',
     audience: 'Growth Partners',
-    benefits: 'Partner dashboard • Onboarding tracking • Milestones • Recognition • Training and support',
+    benefits: 'Partner dashboard • Activation tracking • Milestones • Rewards • Training & support',
     status: 'Demo',
     demoUrl: 'https://fanal-templetes-app.vercel.app/partner/dashboard',
     secondaryLinks: [
-      { label: 'Partner Portal & Application', url: 'https://pink-growth-partner.vercel.app/' },
+      { label: 'Partner Portal & Application', url: 'https://nexora-growth-partner.templateapp67.chatgpt.site/' },
       { label: 'Growth Partner Dashboard', url: 'https://fanal-templetes-app.vercel.app/partner/dashboard' },
     ],
   },
@@ -67,7 +68,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     audience: 'Professionals, salon owners',
     benefits: 'Job discovery • Professional profiles • Hiring connections',
     status: 'Demo',
-    demoUrl: 'https://job-portal-nexora.vercel.app/',
+    demoUrl: 'https://nexora-salon-job-portal.templateapp67.chatgpt.site/',
   },
   {
     id: 'beauty-b2b',
@@ -93,8 +94,8 @@ export const PRODUCTS_DATA: ProductItem[] = [
     oneLiner: 'Discover, order and grow: restaurants and customers on one platform.',
     audience: 'Restaurants, customers',
     benefits: 'Discovery • Ordering • Delivery',
-    status: 'Planned',
-    demoUrl: null,
+    status: 'Demo',
+    demoUrl: 'https://nexora-food.templateapp67.chatgpt.site/',
   },
   {
     id: 'advertising-platform',
