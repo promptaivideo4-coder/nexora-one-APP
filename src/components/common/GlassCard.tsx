@@ -10,7 +10,7 @@ export interface GlassCardProps {
   as?: 'div' | 'article' | 'section';
 }
 
-export const GlassCard: React.FC<GlassCardProps> = ({
+export const GlassCard: React.FC<GlassCardProps> = React.memo(({
   children,
   id,
   className = '',
@@ -41,4 +41,6 @@ export const GlassCard: React.FC<GlassCardProps> = ({
       {children}
     </Component>
   );
-};
+});
+
+GlassCard.displayName = 'GlassCard';

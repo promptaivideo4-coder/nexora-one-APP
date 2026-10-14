@@ -235,7 +235,7 @@ export const EcosystemPage: React.FC = () => {
       </section>
 
       {/* 5.2 Layer Descriptions */}
-      <section className="py-16 sm:py-24 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Architectural Layers"
           title="Six Interconnected"
@@ -243,7 +243,7 @@ export const EcosystemPage: React.FC = () => {
           subtitle="How data, workflows, and commercial opportunities flow seamlessly through the Nexora One architecture."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6 sm:mb-8">
           {ECOSYSTEM_LAYERS.map((layer, idx) => (
             <GlassCard key={layer.id} className="p-6">
               <div className="flex items-center justify-between mb-4">
@@ -264,7 +264,7 @@ export const EcosystemPage: React.FC = () => {
       </section>
 
       {/* 5.3 Core vs Expansion */}
-      <section className="py-16 sm:py-24 border-t border-white/[0.08] bg-white/[0.01]">
+      <section className="py-10 sm:py-12 border-t border-white/[0.08] bg-white/[0.01]">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Maturity Horizon"
@@ -273,16 +273,16 @@ export const EcosystemPage: React.FC = () => {
             subtitle="Nexora maintains transparent separation between demonstrably active platforms and strategic expansion verticals."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
             {/* Core */}
-            <GlassCard className="p-8 border-[#DAAF37]/50" glow="subtle">
+            <GlassCard className="p-6 sm:p-8 border-[#DAAF37]/50" glow="subtle">
               <div className="flex items-center justify-between mb-4">
                 <span className="px-3 py-1 rounded-full bg-[#DAAF37] text-[#0A0A0A] font-heading font-bold text-xs uppercase">
                   Core Ecosystem
                 </span>
                 <Sparkles className="w-5 h-5 text-[#DAAF37]" />
               </div>
-              <h3 className="text-2xl font-heading font-semibold text-white mb-3">
+              <h3 className="text-xl sm:text-2xl font-heading font-semibold text-white mb-3">
                 Beauty Industry
               </h3>
               <p className="text-sm sm:text-base text-white/75 font-sans leading-relaxed mb-6">
@@ -294,14 +294,14 @@ export const EcosystemPage: React.FC = () => {
             </GlassCard>
 
             {/* Expansion */}
-            <GlassCard className="p-8 border-white/20">
+            <GlassCard className="p-6 sm:p-8 border-white/20">
               <div className="flex items-center justify-between mb-4">
                 <span className="px-3 py-1 rounded-full bg-white/10 text-white/70 font-heading font-medium text-xs uppercase border border-white/20">
                   Expansion Verticals
                 </span>
                 <Layers className="w-5 h-5 text-white/40" />
               </div>
-              <h3 className="text-2xl font-heading font-semibold text-white mb-3">
+              <h3 className="text-xl sm:text-2xl font-heading font-semibold text-white mb-3">
                 Planned Industry Expansion
               </h3>
               <p className="text-sm sm:text-base text-white/75 font-sans leading-relaxed mb-6">
@@ -316,16 +316,16 @@ export const EcosystemPage: React.FC = () => {
       </section>
 
       {/* 5.4 Ecosystem Outcomes */}
-      <section className="py-16 sm:py-24 max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
-        <GlassCard className="p-8 sm:p-12 text-center" glow="gold">
-          <div className="text-xs uppercase font-heading font-semibold tracking-widest text-[#DAAF37] mb-3">
+      <section className="py-10 sm:py-12 max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-8">
+        <GlassCard className="p-6 sm:p-10 text-center" glow="gold">
+          <div className="text-xs uppercase font-heading font-semibold tracking-widest text-[#DAAF37] mb-2">
             Expected Outcomes
           </div>
-          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-white mb-8">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-6">
             How Every Participant Benefits
           </h2>
 
-          <div className="space-y-4 max-w-xl mx-auto text-left mb-10">
+          <div className="space-y-3.5 max-w-xl mx-auto text-left mb-6 sm:mb-8">
             {outcomes.map((outcome, idx) => (
               <div key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#DAAF37] flex-shrink-0 mt-0.5" />

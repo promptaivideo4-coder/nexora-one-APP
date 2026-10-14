@@ -25,8 +25,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     right: 'text-right items-end ml-auto',
   }[align];
 
+  const hasCustomMargin = className.includes('mb-') || className.includes('m-');
+  const defaultMargin = hasCustomMargin ? '' : 'mb-6';
+
   return (
-    <div className={`flex flex-col max-w-3xl mb-12 sm:mb-16 ${alignClasses} ${className}`}>
+    <div className={`flex flex-col max-w-3xl ${defaultMargin} ${alignClasses} ${className}`}>
       {eyebrow && (
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-medium tracking-wide uppercase mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-[#F4D03F] animate-pulse" />

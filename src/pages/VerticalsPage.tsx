@@ -12,6 +12,12 @@ import {
   Megaphone,
   Cpu,
   CheckCircle2,
+  User,
+  Store,
+  Globe,
+  TrendingUp,
+  Scissors,
+  Boxes,
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
 import { GlassCard } from '../components/common/GlassCard';
@@ -20,7 +26,11 @@ import { SectionDivider } from '../components/common/SectionDivider';
 import { StatusBadge } from '../components/common/StatusBadge';
 import { FadeIn } from '../components/common/MotionWrapper';
 import { InteractiveImage } from '../components/common/InteractiveImage';
+import { HorizontalCarousel } from '../components/common/HorizontalCarousel';
 import { VERTICALS_DATA } from '../data/verticals';
+
+import beautyEcosystemFinalImg from '../assets/images/nexora_one_beauty_ecosystem_final_v1_1791358242292.jpg';
+import beautyEcosystemSummaryImg from '../assets/images/nexora_beauty_ecosystem_summary_v1_1791358560263.jpg';
 
 export const VerticalsPage: React.FC = () => {
   const beautyVertical = VERTICALS_DATA.find((v) => v.id === 'beauty')!;
@@ -60,14 +70,14 @@ export const VerticalsPage: React.FC = () => {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#F5F5F5] tracking-tight mx-auto leading-[1.15] mb-6">
-              One architecture.{' '}
+              Beauty First.{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] via-[#F4D03F] to-[#DAAF37]">
-                Multiple industries.
+                Now We Can Grow Into More Industries.
               </span>
             </h1>
 
             <p className="text-base sm:text-lg lg:text-xl text-white/75 font-sans leading-relaxed max-w-3xl mx-auto">
-              Beauty is where Nexora began. The same connected architecture is planned to extend into other local-commerce verticals. Each card shows its real status.
+              Nexora started with beauty. The same technology and business setup can be used for other industries like real estate, jobs, food, commerce and more.
             </p>
           </div>
 
@@ -86,20 +96,21 @@ export const VerticalsPage: React.FC = () => {
       </section>
 
       {/* Featured Core Ecosystem Spotlight Card: BEAUTY */}
-      <section className="pb-16 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pb-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <GlassCard
             id="beauty"
-            className="p-8 sm:p-12 lg:p-14 border-2 border-[#DAAF37]/60 relative overflow-hidden"
+            className="p-6 sm:p-8 lg:p-10 border-2 border-[#DAAF37]/60 relative overflow-hidden"
             glow="gold"
           >
             {/* Ambient Gold Radial Beam */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#DAAF37]/20 via-[#F4D03F]/10 to-transparent blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#DAAF37]/15 via-[#F4D03F]/5 to-transparent blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-8 pb-8 border-b border-white/10">
+            {/* Header Content */}
+            <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mb-6 pb-6 border-b border-white/10">
               <div className="flex items-center gap-5">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#F4D03F]/30 to-[#DAAF37]/10 border border-[#DAAF37] flex items-center justify-center shadow-[0_0_25px_rgba(218,175,55,0.35)] flex-shrink-0">
-                  <Sparkles className="w-8 h-8 text-[#F4D03F]" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#F4D03F]/30 to-[#DAAF37]/10 border border-[#DAAF37] flex items-center justify-center shadow-[0_0_25px_rgba(218,175,55,0.35)] flex-shrink-0">
+                  <Sparkles className="w-7 h-7 text-[#F4D03F]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-3">
@@ -107,95 +118,111 @@ export const VerticalsPage: React.FC = () => {
                       Core Ecosystem
                     </span>
                     <span className="text-xs text-[#DAAF37] font-sans font-medium">
-                      {beautyVertical.statusText}
+                      Live & Scaling
                     </span>
                   </div>
-                  <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white mt-1">
-                    {beautyVertical.name}
+                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mt-1">
+                    Beauty — Nexora&apos;s Core Ecosystem
                   </h2>
                   <p className="text-sm font-sans text-[#DAAF37] font-medium mt-0.5">
-                    {beautyVertical.oneLiner}
+                    Beauty is where Nexora starts — and where all major ecosystem layers connect.
                   </p>
                 </div>
               </div>
 
               <Button
-                to={beautyVertical.ctaTarget}
+                to="/beauty-ecosystem"
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="w-4 h-4" />}
                 className="whitespace-nowrap shadow-[0_4px_25px_rgba(218,175,55,0.4)]"
               >
-                {beautyVertical.ctaText}
+                Explore the Beauty Ecosystem
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
-              <div className="lg:col-span-7">
-                <h3 className="text-base font-heading font-semibold text-white mb-2">
-                  Ecosystem Architecture
+            {/* Main Visual Storytelling */}
+            <div className="relative z-10 mb-8">
+              <div className="text-center mb-6">
+                <h3 className="text-xl sm:text-3xl font-heading font-bold text-white mb-2">
+                  ONE BEAUTY BUSINESS. MANY CONNECTIONS.
                 </h3>
-                <p className="text-sm text-white/80 font-sans leading-relaxed mb-6">
-                  {beautyVertical.description}
+                <p className="text-sm sm:text-base text-white/70 font-sans max-w-3xl mx-auto">
+                  Nexora connects customers, businesses, professionals, Growth Partners and B2B into one connected beauty ecosystem.
                 </p>
+              </div>
 
-                <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] mb-6">
-                  <span className="text-xs font-heading font-semibold uppercase tracking-wider text-[#DAAF37] block mb-1">
-                    Core Opportunity
-                  </span>
-                  <p className="text-sm text-white/90 font-sans">
-                    {beautyVertical.coreOpportunity}
-                  </p>
-                </div>
+              {/* PRIMARY CINEMATIC IMAGE */}
+              <div className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-[#DAAF37]/30 shadow-[0_20px_60px_rgba(0,0,0,0.7)] group mb-8">
+                <InteractiveImage
+                  src={beautyEcosystemFinalImg}
+                  alt="NEXORA ONE BEAUTY ECOSYSTEM - Connected Digital Network"
+                  className="w-full h-auto object-cover select-none group-hover:scale-[1.01] transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
 
-                <div className="text-xs text-white/60 font-sans">
-                  <span className="text-white/80 font-medium">Target Stakeholders:</span>{' '}
-                  {beautyVertical.audience}
+              {/* 6 CORE ECOSYSTEM CARDS */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+                {[
+                  { icon: <User className="w-6 h-6" />, title: 'CUSTOMER APP', desc: 'Customers discover, compare and connect.' },
+                  { icon: <Store className="w-6 h-6" />, title: 'SALONOS', desc: 'Businesses manage digital operations and growth.' },
+                  { icon: <Globe className="w-6 h-6" />, title: 'WEBSITES & APPS', desc: 'Every business gets a professional digital presence.' },
+                  { icon: <TrendingUp className="w-6 h-6" />, title: 'GROWTH PARTNER', desc: 'Local businesses get onboarding and ecosystem support.' },
+                  { icon: <Scissors className="w-6 h-6" />, title: 'SALON JOBS', desc: 'Professionals and businesses connect for opportunities.' },
+                  { icon: <Boxes className="w-6 h-6" />, title: 'BEAUTY B2B', desc: 'Brands, suppliers and businesses connect for products and trade.' },
+                ].map((card, i) => (
+                  <div key={i} className="p-5 rounded-2xl bg-white/[0.03] border border-white/[0.08] hover:border-[#DAAF37]/40 transition-all group">
+                    <div className="w-11 h-11 rounded-xl bg-[#DAAF37]/10 border border-[#DAAF37]/20 flex items-center justify-center text-[#F4D03F] mb-3 group-hover:bg-[#DAAF37]/20 transition-colors">
+                      {card.icon}
+                    </div>
+                    <h4 className="text-sm font-heading font-bold text-white mb-1.5 uppercase tracking-wide">
+                      {card.title}
+                    </h4>
+                    <p className="text-xs text-white/60 font-sans leading-relaxed">
+                      {card.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* OPERATIONAL FLOW */}
+              <div className="pt-8 border-t border-white/10 mb-8">
+                <span className="text-xs uppercase font-heading font-semibold tracking-wider text-[#DAAF37] block text-center mb-6">
+                  Operational Flow
+                </span>
+                <div className="flex flex-wrap items-center justify-center gap-y-6 sm:gap-x-4">
+                  {[
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'DISCOVER' },
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'BOOK' },
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'BUILD' },
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'HIRE' },
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'SELL' },
+                    { icon: <CheckCircle2 className="w-5 h-5" />, label: 'GROW' },
+                  ].map((step, i, arr) => (
+                    <React.Fragment key={i}>
+                      <div className="flex flex-col items-center gap-2.5 px-4 py-2 rounded-xl bg-white/[0.02] border border-white/[0.05] min-w-[100px]">
+                        <div className="w-9 h-9 rounded-full bg-[#DAAF37]/15 flex items-center justify-center text-[#DAAF37]">
+                          {step.icon}
+                        </div>
+                        <span className="text-[10px] font-heading font-bold text-white tracking-widest">{step.label}</span>
+                      </div>
+                      {i < arr.length - 1 && (
+                        <div className="hidden sm:block text-[#DAAF37]/40 font-bold text-xl px-2">→</div>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-white/[0.03] rounded-2xl p-6 border border-white/[0.08] flex flex-col justify-between">
-                <div className="mb-5 overflow-hidden rounded-xl border border-[#DAAF37]/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)] aspect-[4/3] sm:aspect-[16/10] relative group">
-                  <InteractiveImage
-                    src="/assets/vert-beauty.webp"
-                    alt="Luxury modern beauty salon interior"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-3 left-3 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#DAAF37] animate-pulse" />
-                    <span className="text-[11px] font-heading font-medium text-[#F4D03F] uppercase tracking-wider">
-                      Core Ecosystem Environment
-                    </span>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-xs font-heading font-semibold uppercase tracking-wider text-[#DAAF37] mb-3">
-                    Connected Beauty Platforms
-                  </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {beautyVertical.relatedProducts.map((prod) => (
-                      <div
-                        key={prod}
-                        className="px-3 py-2 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs font-sans text-white/85 flex items-center gap-2"
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#DAAF37]" />
-                        <span className="truncate">{prod}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-white/[0.08] text-right">
-                    <Link
-                      to="/products"
-                      className="text-xs text-[#DAAF37] hover:underline font-heading font-medium inline-flex items-center gap-1"
-                    >
-                      <span>View all products</span>
-                      <span>→</span>
-                    </Link>
-                  </div>
-                </div>
+              {/* ECOSYSTEM CONNECTION SUMMARY VISUAL */}
+              <div className="rounded-3xl overflow-hidden border border-[#DAAF37]/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] group">
+                <InteractiveImage
+                  src={beautyEcosystemSummaryImg}
+                  alt="ONE BEAUTY ECOSYSTEM - Final Connection Summary Visual"
+                  className="w-full h-auto object-cover select-none group-hover:scale-[1.02] transition-transform duration-700"
+                  loading="lazy"
+                />
               </div>
             </div>
           </GlassCard>
@@ -203,15 +230,15 @@ export const VerticalsPage: React.FC = () => {
       </section>
 
       {/* Section Divider */}
-      <SectionDivider />
+      <SectionDivider className="my-6 sm:my-8" />
 
       {/* Expansion Verticals Grid */}
       <section className="py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Planned Multi-Vertical Layers"
-          title="Horizontal Expansion"
-          titleAccent="Verticals"
-          subtitle="Beyond Beauty, the Nexora One architecture is planned to interconnect commerce, real estate, hospitality, workforce, and advertising."
+          title="One Platform."
+          titleAccent="Many Business Opportunities."
+          subtitle="As Nexora grows, new industries can be added without building everything again from zero."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -297,42 +324,119 @@ export const VerticalsPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Platform Build & Integration Value Highlight Card (Page 06) */}
+      <section className="py-8 sm:py-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <GlassCard
+          className="p-6 sm:p-8 lg:p-10 border border-[#DAAF37]/40 bg-gradient-to-b from-[#141414] via-[#0E0E0E] to-[#080808] relative overflow-hidden shadow-[0_16px_48px_rgba(0,0,0,0.85),0_0_35px_rgba(218,175,55,0.12)]"
+          glow="gold"
+        >
+          {/* Subtle Golden Radial Glow */}
+          <div className="absolute top-0 right-0 w-[450px] h-[350px] bg-gradient-to-bl from-[#DAAF37]/15 via-[#F4D03F]/5 to-transparent blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/35 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
+                Platform Build & Integration Value
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-white tracking-tight leading-tight mb-3">
+                One Connected Ecosystem.{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+                  One Strategic Build Plan.
+                </span>
+              </h2>
+
+              <p className="text-sm sm:text-base text-white/80 font-sans leading-relaxed">
+                Nexora One combines{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37] font-semibold">
+                  Beauty, Jobs, White-label SaaS, Growth Partner, B2B Marketplace, Real Estate, Food Delivery and Customer Services
+                </span>{' '}
+                into one connected web ecosystem.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch lg:items-end xl:items-center gap-4 flex-shrink-0">
+              <Button
+                to="/investor-guide#execution-plan"
+                variant="primary"
+                size="md"
+                icon={<ArrowRight className="w-4 h-4" />}
+                className="whitespace-nowrap shadow-[0_4px_25px_rgba(218,175,55,0.4)]"
+              >
+                View Full Investor Guide →
+              </Button>
+            </div>
+          </div>
+
+          {/* Value Points */}
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors">
+              <span className="text-[11px] uppercase font-heading font-semibold text-white/50 tracking-wider block mb-1">
+                Estimated Platform Value
+              </span>
+              <span className="text-2xl sm:text-3xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+                ₹39.5 Lakh
+              </span>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-[#DAAF37]/15 via-white/[0.02] to-transparent border border-[#DAAF37]/60 shadow-[0_8px_30px_rgba(218,175,55,0.15)] ring-1 ring-[#DAAF37]/30">
+              <span className="text-[11px] uppercase font-heading font-semibold text-[#F4D03F] tracking-wider block mb-1">
+                Maximum 9-Month Execution Cap
+              </span>
+              <span className="text-2xl sm:text-3xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+                ₹45 Lakh
+              </span>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-[#DAAF37]/40 transition-colors sm:col-span-2 lg:col-span-1">
+              <span className="text-[11px] uppercase font-heading font-semibold text-white/50 tracking-wider block mb-1">
+                Planned Delivery Timeline
+              </span>
+              <span className="text-2xl sm:text-3xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+                9 Months
+              </span>
+            </div>
+          </div>
+        </GlassCard>
+      </section>
+
       {/* Multi-Vertical Repeatable Architecture Pattern (Architecture §15) */}
-      <section className="py-20 sm:py-28 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/[0.08]">
-        <GlassCard className="p-8 sm:p-12 text-center" glow="subtle">
+      <section className="py-10 sm:py-12 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/[0.08]">
+        <GlassCard className="p-6 sm:p-8 text-center" glow="subtle">
           <span className="text-xs uppercase font-heading font-semibold tracking-wider text-[#DAAF37] block mb-2">
-            Expansion Methodology
+            Growth Plan
           </span>
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-4">
-            A Reusable Architectural Pattern
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-3">
+            Build Once. Use Again.
           </h2>
-          <p className="text-sm sm:text-base text-white/70 font-sans max-w-2xl mx-auto mb-10 leading-relaxed">
-            Every expansion vertical follows the same disciplined structure: defined stakeholders, specialized platform layers, shared commerce and advertising mechanisms, and cross-vertical synergy.
+          <p className="text-sm sm:text-base text-white/70 font-sans max-w-2xl mx-auto mb-6 leading-relaxed">
+            The same core technology can support different industries. Only the industry-specific features need to change.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-heading font-medium">
-            <span className="px-4 py-2 rounded-xl bg-white/[0.05] border border-white/10 text-white">
+            <span className="px-3.5 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-white">
               Nexora One Core
             </span>
             <span className="text-[#DAAF37]">→</span>
-            <span className="px-4 py-2 rounded-xl bg-white/[0.05] border border-white/10 text-white">
+            <span className="px-3.5 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-white">
               Target Vertical
             </span>
             <span className="text-[#DAAF37]">→</span>
-            <span className="px-4 py-2 rounded-xl bg-white/[0.05] border border-white/10 text-white">
+            <span className="px-3.5 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-white">
               Stakeholder Mapping
             </span>
             <span className="text-[#DAAF37]">→</span>
-            <span className="px-4 py-2 rounded-xl bg-white/[0.05] border border-white/10 text-white">
+            <span className="px-3.5 py-1.5 rounded-xl bg-white/[0.05] border border-white/10 text-white">
               Platform Tools
             </span>
             <span className="text-[#DAAF37]">→</span>
-            <span className="px-4 py-2 rounded-xl bg-[#DAAF37]/20 border border-[#DAAF37]/40 text-[#F4D03F]">
+            <span className="px-3.5 py-1.5 rounded-xl bg-[#DAAF37]/20 border border-[#DAAF37]/40 text-[#F4D03F]">
               Ecosystem Connectivity
             </span>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-8">
             <Button to="/ecosystem" variant="primary" size="md" icon={<ArrowRight className="w-4 h-4" />}>
               Explore Full Ecosystem Map
             </Button>

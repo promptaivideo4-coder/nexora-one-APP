@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import {
   ArrowRight,
+  Sparkles,
 } from 'lucide-react';
 import { Button } from '../components/common/Button';
 import { GlassCard } from '../components/common/GlassCard';
@@ -15,6 +17,7 @@ import { TrustDifferentiationSection } from '../components/home/TrustDifferentia
 import { HomeCTASection } from '../components/home/HomeCTASection';
 
 export const HomePage: React.FC = () => {
+  const { t } = useTranslation();
   const heroRef = useRef<HTMLElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
@@ -33,7 +36,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="w-full">
       {/* 4.1 Hero Section - Seamless Full-Bleed Cinematic Background */}
-      <section ref={heroRef} className="relative min-h-[500px] lg:min-h-[560px] flex items-center pt-6 pb-8 sm:pt-8 sm:pb-10 lg:pt-8 lg:pb-10 overflow-hidden bg-[#0A0A0A]">
+      <section ref={heroRef} className="relative min-h-[500px] lg:min-h-[560px] flex items-center pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-6 lg:pb-8 overflow-hidden bg-[#0A0A0A]">
         {/* Seamless Hero Cinematic Visual Layer (Laptop + Phone + Woman + Glowing Globe) */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           {/* Main Visual Image aligned to right with subtle parallax translation & depth */}
@@ -85,20 +88,20 @@ export const HomePage: React.FC = () => {
             <FadeIn direction="up" className="lg:col-span-7 xl:col-span-6 flex flex-col items-start text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/40 text-[#F4D03F] text-xs font-heading font-medium tracking-wider uppercase mb-4 shadow-[0_0_15px_rgba(218,175,55,0.15)]">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F4D03F] animate-pulse" />
-                CONNECTED DIGITAL ECOSYSTEM
+                {t('home.hero.badge')}
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold tracking-tight text-[#F5F5F5] leading-[1.08] mb-3">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFFFFF] via-[#F4D03F] to-[#DAAF37]">
-                  NEXORA ONE
+                  {t('home.hero.title')}
                 </span>
                 <span className="block text-xl sm:text-3xl lg:text-4xl font-serif font-normal text-white/90 mt-1.5">
-                  A Connected Digital Ecosystem
+                  {t('home.hero.subtitle')}
                 </span>
               </h1>
 
               <p className="text-xs sm:text-lg text-white/75 font-sans leading-relaxed max-w-xl mb-6">
-                Empowering Customers, Businesses, Professionals, Partners and Brands through Technology.
+                {t('home.hero.description')}
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -108,14 +111,14 @@ export const HomePage: React.FC = () => {
                   size="lg"
                   icon={<ArrowRight className="w-4 h-4" />}
                 >
-                  Explore Ecosystem
+                  {t('home.hero.cta.explore')}
                 </Button>
                 <Button
                   to="/products"
                   variant="secondary"
                   size="lg"
                 >
-                  Explore Products
+                  {t('home.hero.cta.products')}
                 </Button>
               </div>
 
@@ -142,37 +145,157 @@ export const HomePage: React.FC = () => {
       {/* 02. Ecosystem Overview Section (matching approved visual reference) */}
       <EcosystemOverview />
 
+      {/* 02.5 Platform Build & Integration Value Highlight Section (Home Page) */}
+      <section className="py-8 sm:py-12 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+        <GlassCard
+          className="p-6 sm:p-10 lg:p-12 border-2 border-[#DAAF37]/45 bg-gradient-to-b from-[#161616] via-[#0F0F0F] to-[#070707] shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(218,175,55,0.12)] relative overflow-hidden"
+          glow="gold"
+        >
+          {/* Ambient Gold Radial Glow */}
+          <div className="absolute top-0 right-1/4 w-[500px] h-[300px] bg-gradient-to-b from-[#DAAF37]/15 via-[#F4D03F]/5 to-transparent blur-[120px] pointer-events-none rounded-full" />
+
+          {/* Small Label */}
+          <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-3">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/40 text-[#F4D03F] text-xs font-heading font-semibold uppercase tracking-[0.2em] shadow-[0_0_15px_rgba(218,175,55,0.15)]">
+              <Sparkles className="w-3.5 h-3.5 text-[#F4D03F]" />
+              Investor Snapshot · 9-Month Execution Plan
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h2 className="relative z-10 text-2xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-[1.15] mb-5">
+            The Value Behind the{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+              Nexora One Ecosystem
+            </span>
+          </h2>
+
+          {/* Main Highlighted Content */}
+          <div className="relative z-10 max-w-4xl space-y-3 text-sm sm:text-base md:text-lg text-white/85 font-sans leading-relaxed mb-6">
+            <p>
+              Nexora One is a multi-vertical digital ecosystem comprising{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37] font-semibold">
+                Beauty, Jobs, White-label SaaS, Growth Partner, B2B Marketplace, Real Estate, Food Delivery and Customer Services
+              </span>
+              .
+            </p>
+            <p>
+              The web platform’s estimated build and production integration value is approximately{' '}
+              <span className="text-xl sm:text-2xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37]">
+                ₹39.5 lakh
+              </span>
+              , with a planned maximum execution cap of{' '}
+              <span className="text-2xl sm:text-3xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF6D6] via-[#F4D03F] to-[#DAAF37]">
+                ₹45 lakh
+              </span>
+              , excluding native mobile applications and recurring third-party operating costs.
+            </p>
+          </div>
+
+          {/* Small Disclaimer Under Main Text */}
+          <p className="relative z-10 text-xs text-white/55 font-sans leading-relaxed max-w-3xl mb-8 p-3.5 rounded-xl bg-white/[0.02] border border-white/10">
+            Scope includes website and web application development, product integration, dashboards, workflows, testing and production readiness. Native mobile apps, transaction fees, marketing and recurring third-party service costs are separate.
+          </p>
+
+          {/* Three Highlight Metric Cards */}
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-white/[0.06] via-white/[0.02] to-transparent border border-[#DAAF37]/35 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+              <span className="text-xs uppercase font-heading font-semibold tracking-wider text-white/60 block mb-2">
+                1. Estimated Platform Value
+              </span>
+              <div className="text-3xl sm:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37] tracking-tight">
+                ₹39.5 Lakh
+              </div>
+            </div>
+
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-[#DAAF37]/15 via-white/[0.02] to-transparent border border-[#DAAF37]/60 shadow-[0_8px_30px_rgba(218,175,55,0.15)] ring-1 ring-[#DAAF37]/30">
+              <span className="text-xs uppercase font-heading font-semibold tracking-wider text-[#F4D03F] block mb-2">
+                2. Maximum Execution Cap
+              </span>
+              <div className="text-3xl sm:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37] tracking-tight">
+                ₹45 Lakh
+              </div>
+            </div>
+
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-white/[0.06] via-white/[0.02] to-transparent border border-[#DAAF37]/35 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+              <span className="text-xs uppercase font-heading font-semibold tracking-wider text-white/60 block mb-2">
+                3. Delivery Timeline
+              </span>
+              <div className="text-3xl sm:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FFF2B2] via-[#F4D03F] to-[#DAAF37] tracking-tight">
+                9 Months
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="relative z-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6 border-t border-white/10">
+            <Button
+              to="/investor-guide#execution-plan"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-4 h-4" />}
+              className="shadow-[0_6px_28px_rgba(218,175,55,0.45)]"
+            >
+              View Investor Guide →
+            </Button>
+            <Button
+              to="/verticals"
+              variant="secondary"
+              size="lg"
+            >
+              Explore Our Verticals →
+            </Button>
+          </div>
+        </GlassCard>
+      </section>
+
       {/* Who Benefits Preview Section (per 17_VISUAL_REFERENCE §4.6) */}
-      <section className="py-6 sm:py-8 border-t border-white/[0.08] bg-white/[0.01]">
+      <section className="pt-4 sm:pt-6 pb-2 sm:pb-3 border-t border-white/[0.08] bg-white/[0.01]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            eyebrow="Participant Value"
-            title="Designed for"
-            titleAccent="Every Participant"
-            subtitle="Nexora provides structured tools, discovery mechanisms, and digital advantages across four primary stakeholders."
+            eyebrow={t('home.benefits.eyebrow')}
+            title={t('home.benefits.title')}
+            titleAccent={t('home.benefits.titleAccent')}
+            subtitle={t('home.benefits.subtitle')}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 sm:gap-5 mb-5 sm:mb-6">
             {[
               {
                 title: 'Customers',
                 tag: 'Discover. Book. Save. Earn. Repeat.',
                 desc: 'Find trusted local businesses, book instantly, and collect rewards without juggling disjointed apps.',
+                route: '/who-benefits#customer',
               },
               {
                 title: 'Business Owners',
-                tag: 'Run. Grow. Automate.',
-                desc: 'Launch branded white-label websites, automate customer communication, and manage daily operations.',
+                tag: 'Build Your Database. Retain Customers.',
+                desc: 'Add your own customers, save visit history, and let Nexora automatically send 30-day recall and rebooking reminders.',
+                route: '/who-benefits#salon-owner',
               },
               {
                 title: 'Growth Partners',
-                tag: 'Onboard. Track. Progress.',
-                desc: 'A dedicated partner dashboard and milestone progression for onboarding local merchants to the platform.',
+                tag: 'Expansion Engine. Track Progress.',
+                desc: 'Onboard local salons, assist with setup, and track your milestone progress through a dedicated partner dashboard.',
+                route: '/who-benefits#growth-partner',
               },
               {
                 title: 'B2B Networks',
                 tag: 'Supply. Distribute. Expand.',
                 desc: 'Wholesale marketplace access connecting manufacturers directly with local salons and verified professionals.',
+                route: '/who-benefits#b2b',
+              },
+              {
+                title: 'Professionals',
+                tag: 'Portfolio. Jobs. Network.',
+                desc: 'Build your digital brand, showcase work, and connect with verified business opportunities in the beauty network.',
+                route: '/who-benefits#professionals',
+              },
+              {
+                title: 'Investors',
+                tag: 'Multi-Vertical • Scalability • Returns',
+                desc: 'Explore market opportunity, monetization streams, and long-term ecosystem expansion strategy.',
+                route: '/who-benefits#investor-section',
               },
             ].map((card, i) => (
               <GlassCard key={i} className="p-5 sm:p-6 flex flex-col justify-between">
@@ -181,26 +304,29 @@ export const HomePage: React.FC = () => {
                   <div className="text-xs text-[#DAAF37] font-medium mb-2.5">{card.tag}</div>
                   <p className="text-xs text-white/70 font-sans leading-relaxed">{card.desc}</p>
                 </div>
-                <div className="mt-3.5 pt-3.5 border-t border-white/10 flex items-center text-xs text-[#DAAF37]">
+                <a
+                  href={card.route}
+                  className="mt-3.5 pt-3.5 border-t border-white/10 flex items-center text-xs text-[#DAAF37] hover:text-[#F4D03F] transition-colors"
+                >
                   <span>View Full Journey</span>
                   <span className="ml-1">→</span>
-                </div>
+                </a>
               </GlassCard>
             ))}
           </div>
 
           <div className="flex justify-center">
             <Button to="/who-benefits" variant="secondary" size="md">
-              See Who Benefits
+              {t('home.benefits.cta')}
             </Button>
           </div>
         </div>
       </section>
 
-      <SectionDivider className="my-5 sm:my-6" />
+      <SectionDivider className="my-3 sm:my-4" />
 
       {/* 4.3 Key Products Preview */}
-      <section className="py-6 sm:py-8 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-2 sm:pt-3 pb-4 sm:pb-6 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DAAF37]/10 border border-[#DAAF37]/30 text-[#F4D03F] text-xs font-heading font-medium tracking-wide uppercase mb-2">

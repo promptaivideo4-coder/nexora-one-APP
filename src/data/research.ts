@@ -330,8 +330,8 @@ export const FEATURE_MATRIX: FeatureMatrixRow[] = [
 export const ARCHITECTURE_MATRIX: ArchitectureDimension[] = [
   {
     dimension: 'Hierarchy Model',
-    conventionalApproach: 'Software-first or standalone aggregator marketplace.',
-    nexoraApproach: 'Customer-first hierarchy unifying discovery with merchant operations.',
+    conventionalApproach: 'Aggregator marketplace that owns the customer relationship.',
+    nexoraApproach: 'Owner-first database where salon owners add their own customers and retain full relationship ownership.',
   },
   {
     dimension: 'Ecosystem Connectivity',
